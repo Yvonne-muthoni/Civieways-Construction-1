@@ -10,7 +10,6 @@ import About from "../pages/About";
 import Services from "../pages/Services";
 import Projects from "../pages/Projects";
 import Clients from "../pages/Clients";
-import Gallery from "../pages/Gallery";
 import Contact from "../pages/Contact";
 
 function AppRoutes() {
@@ -24,7 +23,6 @@ function AppRoutes() {
         <Route path="/services" element={<Services />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/clients" element={<Clients />} />
-        <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
 

@@ -5,22 +5,22 @@ const services = [
   {
     title: "Residential Construction",
     description: "From single family homes to multi-unit apartment complexes and estates,we specialize in constructing safe,comfortable,and aesthetically pleasing residential spaces tailored to modern living.",
-    image: "/images/projects/residential.jpg",
+    image: "src/images/hero/Residential Construction.jpeg",
   },
   {
     title: "Commercial Construction",
     description: "We undertake the construction of office blocks,retail centers,warehouses,industrial facilities,and other commercial structures,designed to optimize functionality,efficiency and appeal for businesses.",
-    image: "/images/projects/commercial.jpg",
+    image: "src/images/hero/Commercial Construction.jpeg",
   },
   {
     title: "Industrial Projects",
     description: "Our expertise extends to the construction of educational institutions,healthcare facilities,community centers and public buildings,adhering to specific functional and regulatory requirements.",
-    image: "/images/projects/industrial.jpg",
+    image: "src/images/hero/Industrial.jpeg",
   },
   {
     title: "Project Management",
     description: "We manage the entire building lifecycle from concept to completion,including architectural coordination,structural engineering,MEP(Mechanical,Electrical,Plumbing)installations,finishes and landscaping.",
-    image: "/images/projects/renovation.jpg",
+    image: "src/images/hero/Project Management.jpeg",
   },
 ];
 

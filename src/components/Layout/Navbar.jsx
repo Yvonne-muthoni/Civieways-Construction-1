@@ -1,112 +1,59 @@
-import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation(); // to track active route
-
-  const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About Us", path: "/about" },
-    { name: "Services", path: "/services" },
-    { name: "Projects", path: "/projects" },
-    { name: "Clients", path: "/clients" },
-    { name: "Gallery", path: "/gallery" },
-    { name: "Contact", path: "/contact" },
-  ];
-
   return (
-    <nav className="bg-blue-900 text-white fixed w-full z-50 shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
-          {/* Logo */}
-          <div className="shrink-0 font-bold text-xl text-yellow-500">
-            Civieways
-          </div>
+    <nav className="fixed w-full top-0 z-50 bg-blue-900 shadow-lg py-4">
+      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
 
-          {/* Desktop Links */}
-          <div className="hidden md:flex space-x-6 items-center">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.path}
-                className={`hover:text-yellow-400 transition ${
-                  location.pathname === link.path
-                    ? "text-yellow-500 font-semibold"
-                    : ""
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
+        {/* Logo */}
+        <Link to="/" className="flex items-center">
+          <img
+            src="src/assets/logo/civie logo.jpg"
+            alt="Civieways Logo"
+            className="h-10 w-10 object-contain"
+          />
+        </Link>
 
-            <Link
-              to="/contact"
-              className="ml-4 px-4 py-2 bg-yellow-500 text-blue-900 font-semibold rounded hover:bg-yellow-400 transition"
-            >
-              Contact Us
-            </Link>
-          </div>
+        {/* Navigation Links */}
+        <div className="hidden md:flex space-x-8 text-white font-medium">
 
-          {/* Mobile Hamburger */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="focus:outline-none"
-            >
-              {isOpen ? (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              )}
-            </button>
-          </div>
+          <Link
+            to="/"
+            className="hover:text-yellow-400 transition duration-300"
+          >
+            Home
+          </Link>
+
+          <Link
+            to="/about"
+            className="hover:text-yellow-400 transition duration-300"
+          >
+            About
+          </Link>
+
+          <Link
+            to="/services"
+            className="hover:text-yellow-400 transition duration-300"
+          >
+            Services
+          </Link>
+
+          <Link
+            to="/projects"
+            className="hover:text-yellow-400 transition duration-300"
+          >
+            Projects
+          </Link>
+
+          <Link
+            to="/contact"
+            className="hover:text-yellow-400 transition duration-300"
+          >
+            Contact
+          </Link>
+
         </div>
       </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-blue-900 px-2 pt-2 pb-3 space-y-1">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.path}
-              onClick={() => setIsOpen(false)}
-              className={`block px-3 py-2 rounded text-white hover:bg-yellow-500 hover:text-blue-900 transition ${
-                location.pathname === link.path ? "bg-yellow-500 text-blue-900 font-semibold" : ""
-              }`}
-            >
-              {link.name}
-            </Link>
-          ))}
-        </div>
-      )}
     </nav>
   );
 }
