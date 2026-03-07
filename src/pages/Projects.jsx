@@ -7,52 +7,46 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "Modern Residential Apartments",
-      location: "Nairobi",
+      title: "Building Construction",
       category: "Residential",
-      image: "/projects/project1.jpg",
+      image: "src/images/projects/Construction.jpeg",
       description:
-        "Construction of modern residential apartments designed for comfort and modern living."
+        "From single family homes to multi-unit apartment complexes and estates,we specialize in constructing safe,comfortable and aesthetically  pleasing residential spaces tailored to modern living."
     },
     {
-      title: "Corporate Office Complex",
-      location: "Westlands",
+      title: "Havens Poultry",
       category: "Commercial",
-      image: "/projects/project2.jpg",
+      image: "src/images/projects/Poultry.jpeg",
       description:
-        "Development of a commercial office complex with modern architectural design."
+        "We undertake the construction of retail centers and other commercial structures designed to optimize functionality and appeal for businesses."
     },
     {
       title: "Highway Development Project",
-      location: "Kiambu",
       category: "Infrastructure",
-      image: "/projects/project3.jpg",
+      image: "src/images/projects/Road.jpeg",
       description:
         "Road construction project improving connectivity and transport efficiency."
     },
     {
-      title: "Luxury Beach Hotel",
-      location: "Mombasa",
-      category: "Hospitality",
-      image: "/projects/project4.jpg",
+      title: "General Renovations",
+      category: "Renovations",
+      image: "src/images/projects/General Renovations.jpeg",
       description:
-        "Development of a luxury hotel with modern amenities and world-class design."
+        "Comprehensive renovation services for homes,including kitchen and bathroom remodels.Upgrading and modernizing commercial spaces,offices and retail outlets to improve functionality."
     },
     {
       title: "Industrial Warehouse",
-      location: "Athi River",
       category: "Industrial",
-      image: "/projects/project5.jpg",
+      image: "src/images/projects/Warehouse.jpeg",
       description:
         "Construction of a large warehouse facility supporting industrial logistics."
     },
     {
-      title: "University Lecture Complex",
-      location: "Nakuru",
+      title: "Chiromo Human Anatomy Department",
       category: "Institutional",
-      image: "/projects/project6.jpg",
+      image: "src/images/projects/Institutional.jpeg",
       description:
-        "Modern lecture halls and academic facilities built for a university campus."
+        "Our expertise extends to the constructionof healthcare facilities adhering to specific functional and regulatory requirements."
     }
   ];
 
@@ -61,7 +55,7 @@ export default function Projects() {
     "Residential",
     "Commercial",
     "Infrastructure",
-    "Hospitality",
+    "Renovations",
     "Industrial",
     "Institutional"
   ];

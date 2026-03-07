@@ -282,7 +282,7 @@ export default function About() {
         className="p-6 bg-white rounded-lg shadow-md flex items-center justify-center w-48 h-48"
       >
         <img
-          src="src/images/about/nca.jpeg"
+          src="src/images/about/NCA.png"
           alt="National Construction Authority"
           className="max-h-24 object-contain"
         />
@@ -298,7 +298,7 @@ export default function About() {
         className="p-6 bg-white rounded-lg shadow-md flex items-center justify-center w-48 h-48"
       >
         <img
-          src="src/images/about/Nairobi County.jpeg"
+          src="src/images/about/Nairobi County.png"
           alt="Nairobi County"
           className=""
         />
