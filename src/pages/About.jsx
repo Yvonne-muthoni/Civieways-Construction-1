@@ -130,7 +130,7 @@ export default function About() {
               {
                 icon: <FaCheckCircle />,
                 title: "Client Satisfaction",
-                desc: "We prioritize understanding our clients' needs and work collaboratively to ensure their vision is realized, fostering long-term relationships.",
+                desc: "We prioritize understanding our clients' needs and work collaboratively to ensure their vision is realized, fostering long-term relationships",
               },
               {
                 icon: <FaLightbulb />,

@@ -39,7 +39,7 @@ export default function Projects() {
       category: "Industrial",
       image: "src/images/projects/Warehouse.jpeg",
       description:
-        "Construction of a large warehouse facility supporting industrial logistics,"
+        "Construction of a large warehouse facility supporting industrial logistics."
     },
     {
       title: "Chiromo Human Anatomy Department",
