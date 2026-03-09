@@ -49,10 +49,9 @@ export default function Services() {
   ];
 
   return (
-    <div className="bg-gray-50 min-h-screen">
-
+    <div className="bg-gray-50 min-h-screen relative overflow-hidden">
       {/* Hero */}
-      <section className="bg-blue-900 text-white py-20 text-center">
+      <section className="bg-blue-900 text-white py-20 text-center relative z-10">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -67,23 +66,38 @@ export default function Services() {
         </p>
       </section>
 
-      {/* Services Grid */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      {/* Animated Background Parallax */}
+      <motion.div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: "url('/images/hero/construction-hero.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          filter: "brightness(0.5)",
+        }}
+        animate={{ y: [-20, 20, -20] }}
+        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+      />
 
+      {/* Services Grid */}
+      <section className="relative z-10 max-w-7xl mx-auto px-6 py-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {services.map((service, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ y: -10 }}
+              whileHover={{ y: -10, scale: 1.05 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.15 }}
-              className="bg-white rounded-xl shadow-lg p-8 text-center"
+              transition={{ delay: index * 0.15, type: "spring", stiffness: 120 }}
+              className="bg-white/90 rounded-xl shadow-lg p-8 text-center backdrop-blur-sm"
             >
-              <div className="text-yellow-500 text-4xl mb-4 flex justify-center">
+              <motion.div
+                whileHover={{ rotate: 10 }}
+                className="text-yellow-500 text-4xl mb-4 flex justify-center"
+              >
                 {service.icon}
-              </div>
+              </motion.div>
 
               <h3 className="text-xl font-semibold text-blue-900 mb-3">
                 {service.title}
@@ -94,7 +108,6 @@ export default function Services() {
               </p>
             </motion.div>
           ))}
-
         </div>
       </section>
     </div>
