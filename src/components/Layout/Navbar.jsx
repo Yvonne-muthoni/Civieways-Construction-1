@@ -8,7 +8,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <img
-            src="src/assets/logo/civie logo.png"
+            src="/logo/civie logo.png"
             alt="Civieways Logo"
             className="h-14 w-auto object-contain"
           />

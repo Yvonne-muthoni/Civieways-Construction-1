@@ -11,8 +11,7 @@ export default function Hero() {
         backgroundPosition: "center",
       }}
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/70"></div>
+      
 
       {/* Content */}
       <div className="relative z-10 max-w-3xl px-4">
