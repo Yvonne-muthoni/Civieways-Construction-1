@@ -44,7 +44,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
 
           <motion.img
-            src="src/images/about/Construction site.jpeg"
+            src="/images/about/Construction site.jpeg"
             alt="Construction site"
             className="rounded-lg shadow-lg h-96 w-full object-cover"
             initial={{ opacity: 0, x: -80 }}
@@ -282,7 +282,7 @@ export default function About() {
         className="p-6 bg-white rounded-lg shadow-md flex items-center justify-center w-48 h-48"
       >
         <img
-          src="src/images/about/NCA.png"
+          src="/images/about/NCA.png"
           alt="National Construction Authority"
           className="max-h-24 object-contain"
         />
@@ -298,7 +298,7 @@ export default function About() {
         className="p-6 bg-white rounded-lg shadow-md flex items-center justify-center w-48 h-48"
       >
         <img
-          src="src/images/about/Nairobi County.png"
+          src="/images/about/Nairobi County.png"
           alt="Nairobi County"
           className=""
         />

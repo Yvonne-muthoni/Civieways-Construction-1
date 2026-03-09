@@ -8,7 +8,7 @@ export default function AboutPreview() {
         {/* Image */}
         <div>
           <img
-            src="src/images/about/Construction site.jpeg"
+            src="/images/about/Construction site.jpeg"
             alt="Civieways Construction Team"
             className="rounded-lg shadow-lg w-full object-cover h-96"
           />

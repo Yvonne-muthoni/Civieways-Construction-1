@@ -9,42 +9,42 @@ export default function Projects() {
     {
       title: "Building Construction",
       category: "Residential",
-      image: "src/images/projects/Construction.jpeg",
+      image: "/images/projects/Construction.jpeg",
       description:
         "From single family homes to multi-unit apartment complexes and estates,we specialize in constructing safe,comfortable and aesthetically  pleasing residential spaces tailored to modern living."
     },
     {
       title: "Havens Poultry",
       category: "Commercial",
-      image: "src/images/projects/Poultry.jpeg",
+      image: "/images/projects/Poultry.jpeg",
       description:
         "We undertake the construction of retail centers and other commercial structures designed to optimize functionality and appeal for businesses."
     },
     {
       title: "Highway Development Project",
       category: "Infrastructure",
-      image: "src/images/projects/Road.jpeg",
+      image: "/images/projects/Road.jpeg",
       description:
         "Road construction project improving connectivity and transport efficiency."
     },
     {
       title: "General Renovations",
       category: "Renovations",
-      image: "src/images/projects/General Renovations.jpeg",
+      image: "/images/projects/General Renovations.jpeg",
       description:
         "Comprehensive renovation services for homes,including kitchen and bathroom remodels.Upgrading and modernizing commercial spaces,offices and retail outlets to improve functionality."
     },
     {
       title: "Industrial Warehouse",
       category: "Industrial",
-      image: "src/images/projects/Warehouse.jpeg",
+      image: "/images/projects/Warehouse.jpeg",
       description:
         "Construction of a large warehouse facility supporting industrial logistics."
     },
     {
       title: "Chiromo Human Anatomy Department",
       category: "Institutional",
-      image: "src/images/projects/Institutional.jpeg",
+      image: "/images/projects/Institutional.jpeg",
       description:
         "Our expertise extends to the constructionof healthcare facilities adhering to specific functional and regulatory requirements."
     }
