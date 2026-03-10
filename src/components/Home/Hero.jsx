@@ -4,29 +4,23 @@ import { Link } from "react-router-dom";
 export default function Hero() {
 
   const images = [
-    "/images/hero/Construction.jpeg",
-    "/images/projects/Residential Construction.jpeg",
-    "/images/projects/Poultry.jpeg",
-    "/images/projects/Road.jpeg",
-    "/images/projects/General Renovations.jpeg",
+    "/images/hero/construction-hero.jpg",
+    "/images/hero/Residential Construction.jpeg",
+    "/images/projects/Construction.jpeg",
+    "/images/projects/Institutional.jpeg",
   ];
 
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
-      images.forEach((image) => {
-    const img = new Image();
-    img.src = image;
-  });
+    const interval = setInterval(() => {
+      setCurrentImage((prev) =>
+        prev === images.length - 1 ? 0 : prev + 1
+      );
+    }, 4000);
 
-  const interval = setInterval(() => {
-    setCurrentImage((prev) =>
-      prev === images.length - 1 ? 0 : prev + 1
-    );
-  }, 3500);
-
-  return () => clearInterval(interval);
-}, []);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="relative h-screen flex items-center justify-center text-center overflow-hidden">
@@ -42,8 +36,6 @@ export default function Hero() {
             backgroundImage: `url(${image})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            
-
           }}
         />
       ))}
