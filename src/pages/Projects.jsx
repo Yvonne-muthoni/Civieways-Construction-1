@@ -1,66 +1,96 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useRef } from "react";
 
 export default function Projects() {
-  const [filter, setFilter] = useState("All");
 
-  const categories = [
-    "All",
-    "Residential",
-    "Commercial",
-    "Infrastructure",
-    "Renovations",
-    "Industrial",
-    "Institutional",
+  const projects = [
+    {
+      heading: "Residential Construction",
+      images: [
+        "/images/hero/Commercial Construction.jpeg",
+        "/images/hero/Residential Construction.jpeg",
+        "/images/projects/Construction.jpeg"
+      ],
+    },
+
+    {
+      heading: "Josmil School Homabay",
+      images: [
+        "/images/Josmil School/WhatsApp Image 2026-03-10 at 11.46.20 AM (1).jpeg",
+        "/images/Josmil School/WhatsApp Image 2026-03-10 at 11.46.20 AM (2).jpeg",
+        "/images/Josmil School/WhatsApp Image 2026-03-10 at 11.46.29 AM.jpeg",
+        "/images/Josmil School/WhatsApp Image 2026-03-10 at 11.46.20 AM.jpeg",
+        "/images/Josmil School/WhatsApp Image 2026-03-10 at 11.46.21 AM (1).jpeg",
+        "/images/Josmil School/WhatsApp Image 2026-03-10 at 11.46.21 AM.jpeg",
+        "/images/Josmil School/WhatsApp Image 2026-03-10 at 11.46.22 AM (1).jpeg",
+      ],
+    },
+
+    {
+      heading: "Shauri Yako Primary School",
+      images: [
+        "/images/Education/moe.c.jpeg",
+        "/images/Education/moe.d.jpeg",
+        "/images/Education/moe.e.jpeg",
+        "/images/Education/moe.f.jpeg",
+        "/images/Education/moe.g.jpeg",
+        "/images/Education/moe.h.jpeg",
+        "/images/Education/moe.i.jpeg",
+        "/images/Education/moe.j.jpeg",
+        "/images/Education/moe.k.jpeg",
+        "/images/Education/moe.l.jpeg",
+        "/images/Education/moe.m.jpeg",
+        "/images/Education/moe.n.jpeg",
+      ],
+    },
+
+    {
+      heading: "Muthaiga Masonry Fence",
+      images: [
+        "/images/Muthaiga Masonry/m.f.jpeg",
+        "/images/Muthaiga Masonry/m.a.jpeg",
+        "/images/Muthaiga Masonry/m.b.jpeg",
+        "/images/Muthaiga Masonry/m.c.jpeg",
+        "/images/Muthaiga Masonry/m.d.jpeg",
+        "/images/Muthaiga Masonry/m.e.jpeg",
+        "/images/Muthaiga Masonry/m.h.jpeg",
+        "/images/Muthaiga Masonry/m.i.jpeg",
+        "/images/Muthaiga Masonry/m.j.jpeg",
+        "/images/Muthaiga Masonry/m.g.jpeg"
+      ],
+    },
+
+    {
+      heading: "AHN Garden City Project",
+      images: [
+        "/images/Gardencity/ahn.a.jpeg",
+        "/images/Gardencity/ahn.b.jpeg",
+        "/images/Gardencity/ahn.c.jpeg",
+        "/images/Gardencity/ahn.d.jpeg",
+        "/images/Gardencity/ahn.e.jpeg",
+        "/images/Gardencity/ahn.f.jpeg"
+      ],
+    },
+
+    {
+      heading: "Industrial Projects",
+      images: [
+        "/images/hero/Industrial.jpeg",
+        "/images/projects/Warehouse.jpeg",
+      ],
+    },
+
+    {
+      heading: "Chiromo Human Anatomy Department Project",
+      images: [
+        "/images/Chiromo/ch.a.jpeg",
+        "/images/Chiromo/ch.b.jpeg",
+        "/images/Chiromo/ch.c.jpeg",
+        "/images/Chiromo/ch.d.jpeg",
+        "/images/Chiromo/ch.e.jpeg",
+      ],
+    },
   ];
-
-  // Grouped projects: optional heading + images
-  const allProjects = {
-    Residential: [
-      { images: ["/images/hero/Commercial Construction.jpeg", "/images/hero/Residential Construction.jpeg"] },
-    ],
-    Commercial: [
-      {
-        heading: "Josmil School",
-        images: [
-          "/images/Josmil School/WhatsApp Image 2026-03-10 at 11.46.20 AM (1).jpeg",
-          "/images/Josmil School/WhatsApp Image 2026-03-10 at 11.46.20 AM (2).jpeg",
-          "/images/Josmil School/WhatsApp Image 2026-03-10 at 11.46.20 AM (3).jpeg",
-          "/images/Josmil School/WhatsApp Image 2026-03-10 at 11.46.29 AM.jpeg",
-          "/images/Josmil School/WhatsApp Image 2026-03-10 at 11.46.20 AM.jpeg",
-          "/images/Josmil School/WhatsApp Image 2026-03-10 at 11.46.21 AM (1).jpeg",
-          "/images/Josmil School/WhatsApp Image 2026-03-10 at 11.46.21 AM.jpeg",
-          "/images/Josmil School/WhatsApp Image 2026-03-10 at 11.46.22 AM (1).jpeg",
-        ],
-      },
-      {
-        heading: "Shauri Yako Primary School",
-        images: [
-          "/images/Josmil School/WhatsApp Image 2026-03-10 at 11.46.21 AM (1).jpeg",
-          "/images/Josmil School/WhatsApp Image 2026-03-10 at 11.46.21 AM.jpeg",
-          "/images/Josmil School/WhatsApp Image 2026-03-10 at 11.46.22 AM (1).jpeg",
-        ],
-      },
-    ],
-    Infrastructure: [
-      { images: ["/images/Infrastructure/Bridge.jpeg"] },
-    ],
-    Renovations: [
-      { images: ["/images/Renovations/General Renovations.jpeg", "/images/Renovations/Kitchen.jpeg"] },
-    ],
-    Industrial: [
-      { images: ["/images/hero/Industrial.jpeg", "/images/projects/Warehouse.jpeg"] },
-    ],
-    Institutional: [
-      { images: ["/images/Institutional/Institutional.jpeg"] },
-    ],
-  };
-
-  // Prepare filtered projects based on category
-  const filteredProjects =
-    filter === "All"
-      ? Object.values(allProjects).flat()
-      : allProjects[filter] || [];
 
   return (
     <div className="bg-gray-50 min-h-screen">
@@ -74,60 +104,63 @@ export default function Projects() {
         >
           Our Projects
         </motion.h1>
-        <p className="mt-4 text-lg max-w-2xl mx-auto">
-          Explore some of the projects Civieways Construction has delivered across different sectors.
-        </p>
       </section>
 
-      {/* Filters */}
-      <section className="max-w-7xl mx-auto px-6 pt-16 text-center">
-        <div className="flex flex-wrap justify-center gap-4">
-          {categories.map((category, index) => (
-            <button
-              key={index}
-              onClick={() => setFilter(category)}
-              className={`px-5 py-2 rounded-full font-medium transition
-                ${
-                  filter === category
-                    ? "bg-yellow-500 text-blue-900"
-                    : "bg-white text-gray-700 shadow hover:bg-yellow-100"
-                }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-      </section>
+      {/* Project Cards */}
+      <section className="max-w-7xl mx-auto px-6 py-16 space-y-16">
+        {projects.map((project, idx) => {
 
-      {/* Projects Masonry Grid with Group Headings */}
-      <section className="max-w-7xl mx-auto px-6 py-16 space-y-12">
-        {filteredProjects.map((group, idx) => (
-          <div key={idx}>
-            {group.heading && (
-              <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6 text-center">
-                {group.heading}
+          const scrollRef = useRef(null);
+
+          const scroll = (direction) => {
+            const { current } = scrollRef;
+            if (direction === "left")
+              current.scrollBy({ left: -500, behavior: "smooth" });
+            else
+              current.scrollBy({ left: 500, behavior: "smooth" });
+          };
+
+          return (
+            <div key={idx} className="bg-white shadow-xl rounded-2xl p-8 relative">
+
+              {/* Project Title */}
+              <h2 className="text-2xl font-bold text-blue-900 mb-6">
+                {project.heading}
               </h2>
-            )}
-            <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-              {group.images.map((src, index) => (
-                <motion.div
-                  key={index}
-                  className="break-inside-avoid relative rounded-xl overflow-hidden shadow-lg group mb-6"
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                >
-                  <img
+
+              {/* Left Arrow */}
+              <button
+                onClick={() => scroll("left")}
+                className="absolute left-3 top-1/2 -translate-y-1/2 bg-blue-900 text-white w-12 h-12 rounded-full shadow-lg"
+              >
+                ‹
+              </button>
+
+              {/* Images */}
+              <div
+                ref={scrollRef}
+                className="flex gap-8 overflow-x-auto scroll-smooth"
+              >
+                {project.images.map((src, index) => (
+                  <motion.img
+                    key={index}
                     src={src}
-                    alt={`Project ${index + 1}`}
-                    className="w-full object-cover rounded-xl group-hover:scale-105 transition duration-300"
+                    className="w-105 h-80 object-cover rounded-xl shrink-0"
+                    whileHover={{ scale: 1.05 }}
                   />
-                </motion.div>
-              ))}
+                ))}
+              </div>
+
+              {/* Right Arrow */}
+              <button
+                onClick={() => scroll("right")}
+                className="absolute right-3 top-1/2 -translate-y-1/2 bg-blue-900 text-white w-12 h-12 rounded-full shadow-lg"
+              >
+                ›
+              </button>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </section>
     </div>
   );
