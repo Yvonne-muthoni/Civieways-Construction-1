@@ -262,7 +262,7 @@ export default function About() {
       </section>
 
       
-      {/* Accreditation & Memberships */}
+     
        {/* Accreditation & Memberships */}
 <section className="py-20 bg-blue-50">
   <div className="max-w-7xl mx-auto px-4 text-center">
