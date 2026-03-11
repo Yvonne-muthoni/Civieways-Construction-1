@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav className="fixed w-full top-0 z-50 bg-blue-900 shadow-lg py-4">
+    <nav className="fixed w-full top-0 z-50 bg-blue-900 shadow-lg py-2.5">
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
 
         {/* Logo + Company Name */}
@@ -10,7 +10,7 @@ export default function Navbar() {
           <img
             src="/logo/civie logo.png"
             alt="Civieways Logo"
-            className="h-14 w-auto object-contain"
+            className="h-12 w-auto object-contain"
           />
 
           <span className="text-white font-bold text-lg md:text-xl">
