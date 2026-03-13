@@ -46,7 +46,7 @@ export default function Hero() {
         {/* Statistics */}
         <div
           ref={ref}
-          className="bg-blue-100 py-10 px-6 rounded-lg max-w-6xl  grid grid-cols-4 md:grid-cols-4 gap-8 text-center"
+          className="bg-blue-100 py-0.5 px-6 rounded-lg max-w-2xl  grid grid-cols-2 md:grid-cols-4 gap-4 text-center "
         >
           <div>
             <h3 className="text-4xl font-bold text-blue-900">

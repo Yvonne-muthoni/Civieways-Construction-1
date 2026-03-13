@@ -21,9 +21,9 @@ export default function FeaturedProjects() {
 
   return (
     <section className=" bg-white">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-15 mb-6">
         {/* Section Title */}
-        <h2 className="text-2xl sm:text-3xl font-bold text-yellow-400 mb-12 text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-12 text-center mt-8">
           Featured Projects
         </h2>
 

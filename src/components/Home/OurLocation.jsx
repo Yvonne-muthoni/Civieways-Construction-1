@@ -1,9 +1,9 @@
 export default function OurLocation() {
   return (
-    <section className="py-8 bg-blue-50">
+    <section className="py-4 bg-blue-50">
       <div className="max-w-4xl mx-auto px-4 text-center">
 
-        <h2 className="text-2xl font-bold text-blue-900 mb-4">
+        <h2 className="text-3xl font-bold text-blue-900 mb-4">
           Our Location
         </h2>
 
@@ -12,7 +12,7 @@ export default function OurLocation() {
         </p>
 
         {/* Small Map */}
-        <div className="w-full h-56 rounded-lg overflow-hidden shadow">
+        <div className="w-full h-100 rounded-lg overflow-hidden shadow">
           <iframe
             src="https://maps.google.com/maps?q=Muslim%20Rd%20off%20Park%20Road%20Ngara%20Kirima%20Market%20Building%20Nairobi&t=&z=15&ie=UTF8&iwloc=&output=embed"
             className="w-full h-full border-0"

@@ -26,12 +26,12 @@ const equipmentList = [
 
 export default function OurEquipment() {
   return (
-    <section className="py-10 bg-white">
+    <section className="py-6 bg-gray-200">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold text-blue-900 mb-6">
+        <h2 className="text-3xl sm:text-3xl font-bold text-blue-900 mb-6">
           Our Equipment
         </h2>
-        <p className="text-gray-700 mb-12">
+        <p className="text-gray-700 mb-6">
           We invest in modern, high-quality machinery and tools to ensure efficiency and safety on every project.
         </p>
 

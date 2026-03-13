@@ -17,10 +17,10 @@ export default function ChooseUs() {
   ];
 
   return (
-    <section className="pt-20 pb-20 mt-6 bg-gray-300">
+    <section className="pt-2 pb-4 bg-gray-300">
       <div className="max-w-7xl mx-auto px-4 text-center">
 
-        <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-12">
+        <h2 className="text-3xl md:text-3xl font-bold text-blue-900 mb-12">
           Why Choose Civieways
         </h2>
 
