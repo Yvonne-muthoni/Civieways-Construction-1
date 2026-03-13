@@ -106,62 +106,97 @@ export default function Projects() {
         </motion.h1>
       </section>
 
-      {/* Project Cards */}
-      <section className="max-w-7xl mx-auto px-6 py-16 space-y-16">
-        {projects.map((project, idx) => {
+      {/* Intro Section */}
+      <section className="bg-white py-20">
+        <div className="max-w-5xl mx-auto text-center px-6">
 
-          const scrollRef = useRef(null);
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl md:text-4xl font-bold text-blue-900 mb-6"
+          >
+            Building Excellence Across Every Project
+          </motion.h2>
 
-          const scroll = (direction) => {
-            const { current } = scrollRef;
-            if (direction === "left")
-              current.scrollBy({ left: -500, behavior: "smooth" });
-            else
-              current.scrollBy({ left: 500, behavior: "smooth" });
-          };
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="text-gray-600 text-lg leading-relaxed"
+          >
+            We take pride in delivering high-quality construction projects
+            across residential, commercial, and institutional sectors.
+            Our commitment to craftsmanship, safety, and innovation ensures
+            that every project we complete meets the highest standards
+            of durability and design.
+          </motion.p>
 
-          return (
-            <div key={idx} className="bg-white shadow-xl rounded-2xl p-8 relative">
-
-              {/* Project Title */}
-              <h2 className="text-2xl font-bold text-blue-900 mb-6">
-                {project.heading}
-              </h2>
-
-              {/* Left Arrow */}
-              <button
-                onClick={() => scroll("left")}
-                className="absolute left-3 top-1/2 -translate-y-1/2 bg-blue-900 text-white w-12 h-12 rounded-full shadow-lg"
-              >
-                ‹
-              </button>
-
-              {/* Images */}
-              <div
-                ref={scrollRef}
-                className="flex gap-8 overflow-x-auto scroll-smooth"
-              >
-                {project.images.map((src, index) => (
-                  <motion.img
-                    key={index}
-                    src={src}
-                    className="w-105 h-80 object-cover rounded-xl shrink-0"
-                    whileHover={{ scale: 1.05 }}
-                  />
-                ))}
-              </div>
-
-              {/* Right Arrow */}
-              <button
-                onClick={() => scroll("right")}
-                className="absolute right-3 top-1/2 -translate-y-1/2 bg-blue-900 text-white w-12 h-12 rounded-full shadow-lg"
-              >
-                ›
-              </button>
-            </div>
-          );
-        })}
+        </div>
       </section>
+
+      {/* Project Cards Section */}
+      <section className="bg-gray-100 py-20">
+        <div className="max-w-7xl mx-auto px-6 space-y-16">
+
+          {projects.map((project, idx) => {
+
+            const scrollRef = useRef(null);
+
+            const scroll = (direction) => {
+              const { current } = scrollRef;
+              if (direction === "left")
+                current.scrollBy({ left: -500, behavior: "smooth" });
+              else
+                current.scrollBy({ left: 500, behavior: "smooth" });
+            };
+
+            return (
+              <div key={idx} className="bg-white shadow-xl rounded-2xl p-8 relative">
+
+                {/* Project Title */}
+                <h2 className="text-2xl font-bold text-blue-900 mb-6">
+                  {project.heading}
+                </h2>
+
+                {/* Left Arrow */}
+                <button
+                  onClick={() => scroll("left")}
+                  className="absolute left-3 top-1/2 -translate-y-1/2 bg-blue-900 text-white w-12 h-12 rounded-full shadow-lg"
+                >
+                  ‹
+                </button>
+
+                {/* Images */}
+                <div
+                  ref={scrollRef}
+                  className="flex gap-8 overflow-x-auto scroll-smooth"
+                >
+                  {project.images.map((src, index) => (
+                    <motion.img
+                      key={index}
+                      src={src}
+                      className="w-105 h-80 object-cover rounded-xl shrink-0"
+                      whileHover={{ scale: 1.05 }}
+                    />
+                  ))}
+                </div>
+
+                {/* Right Arrow */}
+                <button
+                  onClick={() => scroll("right")}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 bg-blue-900 text-white w-12 h-12 rounded-full shadow-lg"
+                >
+                  ›
+                </button>
+
+              </div>
+            );
+          })}
+
+        </div>
+      </section>
+
     </div>
   );
 }
