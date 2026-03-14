@@ -19,7 +19,7 @@ export default function Navbar() {
         </Link>
 
         {/* Navigation Links */}
-        <div className="hidden md:flex space-x-8 text-yellow-400 font-medium">
+        <div className="hidden md:flex space-x-8 text-yellow-400 font-extrabold">
 
           <Link
             to="/"

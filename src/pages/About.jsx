@@ -19,26 +19,37 @@ export default function About() {
     <div>
 
       {/* Hero Section */}
-      <section className="bg-blue-900 text-white py-20 text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: -40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl md:text-5xl font-bold mb-4"
-        >
-          About Civieways Construction Company
-        </motion.h1>
+    <section
+  className="relative text-white py-25 text-center bg-cover bg-center"
+  style={{ backgroundImage: "url('/images/hero/Project Management.jpeg')" }}
+>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-          className="text-lg text-gray-200 max-w-2xl mx-auto"
-        >
-          Building quality structures and lasting relationships across Kenya.
-        </motion.p>
-      </section>
+   {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/60"></div>
 
+  <div className="relative z-10 px-4">
+
+    <motion.h1
+      initial={{ opacity: 0, y: -40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="text-4xl md:text-5xl font-bold mb-4"
+    >
+      About Civieways Construction Company
+    </motion.h1>
+
+    <motion.p
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.4 }}
+      className="text-lg text-white max-w-2xl mx-auto"
+    >
+      Building quality structures and lasting relationships across Kenya.
+    </motion.p>
+
+  </div>
+
+</section>
       {/* Company Introduction */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
@@ -81,7 +92,7 @@ export default function About() {
 
       {/* Mission & Vision */}
       <section className="py-20 bg-blue-50">
-        <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12">
+        <div className="max-w-7xl mx-auto px-10 grid md:grid-cols-2 gap-8 mt-8">
 
           <motion.div
             whileHover={{ scale: 1.05 }}
