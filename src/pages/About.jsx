@@ -6,12 +6,8 @@ import {
   FaLightbulb,
   FaHardHat,
   FaLeaf,
-  FaHome,
-  FaBuilding,
-  FaUniversity,
-  FaRoad,
-  FaHotel,
-  FaIndustry,
+  FaComments,
+  FaDraftingCompass
 } from "react-icons/fa";
 
 export default function About() {
@@ -51,7 +47,7 @@ export default function About() {
 
 </section>
       {/* Company Introduction */}
-      <section className="py-20 bg-white">
+      <section className="py-6 bg-white">
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
 
           <motion.img
@@ -73,11 +69,9 @@ export default function About() {
             <h2 className="text-3xl font-bold text-blue-900 mb-6">Who We Are</h2>
 
             <p className="text-gray-700 mb-4 leading-relaxed">
-              Civieways Construction Limited is a reputable and dynamic construction
-              firm dedicated to delivering high-quality building, renovation and
-              infrastructure solutions. Based in Kenya, we bring a wealth of expertise
-              to every project, ensuring timely completion, cost efficiency and
-              adherence to the highest standards of safety and quality.
+              Civieways Construction Ltd is a trusted Kenyan construction company specializing in residential, commercial and infrastructure development.
+              Our team of engineers, architects and construction professionals deliver projects built with durability, safety and efficiency. From planning and design to project execution, we ensure every project meets the highest construction standards.
+
             </p>
 
             <p className="text-gray-700 leading-relaxed">
@@ -91,8 +85,8 @@ export default function About() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-blue-50">
-        <div className="max-w-7xl mx-auto px-10 grid md:grid-cols-2 gap-8 mt-8">
+      <section className="py-6 mt-12 bg-blue-50">
+        <div className="max-w-7xl mx-auto px-10 grid md:grid-cols-2 gap-8 ">
 
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -125,7 +119,7 @@ export default function About() {
       <Stats />
 
       {/* Core Values */}
-      <section className="py-20 bg-white">
+      <section className="py-4 mt-4  bg-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-12">
             Our Core Values
@@ -136,27 +130,27 @@ export default function About() {
               {
                 icon: <FaShieldAlt />,
                 title: "Integrity",
-                desc: "We operate with honesty, transparency and ethical conduct in all our dealings, building trust with our clients, partners and employees.",
+                desc: "We operate with honesty and transparency..",
               },
               {
                 icon: <FaCheckCircle />,
                 title: "Client Satisfaction",
-                desc: "We prioritize understanding our clients' needs and work collaboratively to ensure their vision is realized, fostering long-term relationships.",
+                desc: "We prioritize client satisfaction.",
               },
               {
                 icon: <FaLightbulb />,
                 title: "Innovation",
-                desc: "We embrace innovative construction techniques and technologies to enhance efficiency, reduce cost and deliver cutting-edge solutions.",
+                desc: "We adopt modern construction technologies.",
               },
               {
                 icon: <FaLeaf />,
                 title: "Sustainability",
-                desc: "We are committed to environmentally responsible construction practices, minimizing our ecological footprint and promoting sustainable development.",
+                desc: "We support environmentally responsible construction..",
               },
               {
                 icon: <FaHardHat />,
                 title: "Safety",
-                desc: "The health and safety of our workforce, clients and the public are paramount. We implement stringent safety protocols and maintain a zero-incident culture.",
+                desc: "Safety is our highest priority.",
               },
             ].map((value, index) => (
               <motion.div
@@ -177,105 +171,69 @@ export default function About() {
         </div>
       </section>
 
-      {/* Sectors We Serve */}
-      <section className="py-20 bg-blue-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12">Sectors We Serve</h2>
+      {/* Our Construction Process */}
+<section className="py-6 bg-blue-900 text-white">
+  <div className="max-w-7xl mx-auto px-4 text-center">
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <FaHome />,
-                title: "Residential Sector",
-                desc: "Delivering high-quality homes, apartments, and residential estates, focusing on comfort, safety and modern living standards.",
-              },
-              {
-                icon: <FaBuilding />,
-                title: "Commercial Sector",
-                desc: "Constructing and renovating office buildings, retail centers, warehouses and industrial facilities that enhance business operations and appeal.",
-              },
-              {
-                icon: <FaUniversity />,
-                title: "Institutional Sector",
-                desc: "Building and upgrading educational institutions, healthcare facilities, community centers and other public buildings, designed for specific functional and regulatory requirements.",
-              },
-              {
-                icon: <FaRoad />,
-                title: "Infrastructure Sector",
-                desc: "Contributing to essential public works through the construction of roads, highways, earthworks and comprehensive drainage systems.",
-              },
-              {
-                icon: <FaHotel />,
-                title: "Hospitality Sector",
-                desc: "Developing and renovating hotels, resorts, restaurants and leisure facilities, creating inviting and functional spaces for guests and operations.",
-              },
-              {
-                icon: <FaIndustry />,
-                title: "Industrial & Manufacturing Sector",
-                desc: "Constructing specialized facilities such as factories and production plants.",
-              },
-            ].map((sector, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ y: -12, scale: 1.03 }}
-                initial={{ opacity: 0, y: 60 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.15 }}
-                className="group bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition duration-300"
-              >
-                <div className="text-yellow-500 text-4xl mb-4 flex justify-center group-hover:scale-110 transition">
-                  {sector.icon}
-                </div>
-                <h4 className="text-xl font-semibold text-blue-900 mb-3">{sector.title}</h4>
-                <p className="text-gray-600 leading-relaxed text-sm">{sector.desc}</p>
-              </motion.div>
-            ))}
+    <h2 className="text-3xl md:text-4xl font-bold mb-12">
+      Our Construction Process
+    </h2>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      {[
+        {
+          icon: <FaComments />,
+          title: "Consultation",
+          desc: "Understanding client goals, requirements and project scope.",
+        },
+        {
+          icon: <FaDraftingCompass />,
+          title: "Planning",
+          desc: "Engineering design, budgeting and detailed project planning.",
+        },
+        {
+          icon: <FaHardHat />,
+          title: "Construction",
+          desc: "Professional, safe and efficient project execution.",
+        },
+        {
+          icon: <FaCheckCircle />,
+          title: "Delivery",
+          desc: "Inspection, final completion and project handover.",
+        },
+      ].map((step, index) => (
+        <motion.div
+          key={index}
+          whileHover={{ y: -10, scale: 1.03 }}
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: index * 0.2 }}
+          className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition"
+        >
+          <div className="text-yellow-500 text-4xl mb-4 flex justify-center">
+            {step.icon}
           </div>
-        </div>
-      </section>
 
-      {/* Why Choose Civieways */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-12">Why Choose Civieways</h2>
+          <h4 className="text-xl font-semibold text-blue-900 mb-3">
+            {step.title}
+          </h4>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Quality Construction",
-                desc: "Our team delivers durable and reliable structures, meeting the highest construction standards.",
-              },
-              {
-                title: "Professional Team",
-                desc: "Experienced engineers, architects, and skilled workers ensuring excellence in every project.",
-              },
-              {
-                title: "Timely Delivery",
-                desc: "We complete projects on schedule without compromising quality, respecting client deadlines.",
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ y: -10 }}
-                initial={{ opacity: 0, y: 60 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
-                className="p-6 shadow-md rounded-lg"
-              >
-                <h4 className="text-xl font-semibold text-yellow-500 mb-4">{item.title}</h4>
-                <p className="text-gray-600">{item.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+          <p className="text-gray-600 text-sm leading-relaxed">
+            {step.desc}
+          </p>
 
-      
-     
+        </motion.div>
+      ))}
+
+    </div>
+
+  </div>
+</section>
+  
        {/* Accreditation & Memberships */}
-<section className="py-20 bg-blue-50">
+<section className="py-4 bg-blue-50">
   <div className="max-w-7xl mx-auto px-4 text-center">
     <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-12">
       Our Accreditations & Memberships
@@ -321,7 +279,7 @@ export default function About() {
           
 
       {/* Call To Action */}
-      <section className="py-20 bg-yellow-500 text-center">
+      <section className="py-4 bg-yellow-500 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
           Ready to Start Your Construction Project?
         </h2>
