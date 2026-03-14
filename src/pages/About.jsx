@@ -281,11 +281,11 @@ export default function About() {
       {/* Call To Action */}
       <section className="py-4 bg-yellow-500 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
-          Ready to Start Your Construction Project?
+          Start Your Construction Project with Us
         </h2>
 
         <p className="text-blue-900 mb-8">
-          Contact Civieways Construction today and let's build something great together.
+          Contact Civieways Construction today and let's build something great.
         </p>
 
         <a

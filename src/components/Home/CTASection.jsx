@@ -10,8 +10,7 @@ export default function CTA() {
         </h2>
 
         <p className="text-gray-200 mb-8 text-lg">
-          Partner with Civieways Construction Company for reliable,
-          professional, and high-quality building solutions across Kenya.
+          Contact Civieways Construction for professional building services.
         </p>
 
         <Link
