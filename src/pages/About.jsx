@@ -29,7 +29,7 @@ export default function About() {
       initial={{ opacity: 0, y: -40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="text-4xl md:text-5xl font-bold mb-4"
+      className="text-2xl md:text-3xl font-bold mb-4"
     >
       About Civieways Construction Company
     </motion.h1>

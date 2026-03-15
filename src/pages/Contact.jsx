@@ -3,7 +3,6 @@ import { useState } from "react";
 import {
   FaPhoneAlt,
   FaEnvelope,
-  FaMapMarkerAlt,
   FaWhatsapp,
   FaFacebook,
   FaInstagram,
@@ -15,122 +14,215 @@ export default function Contact() {
 
   const [open, setOpen] = useState(false);
 
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const heroImage = "/images/Education/moe.j.jpeg";
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const subject = `Construction Inquiry from ${formData.name}`;
+    const body = `
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+
+Message:
+${formData.message}
+`;
+
+    window.location.href = `mailto:info@civieways.co.ke?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
 
-      {/* Why Choose Section */}
-      <section className="pt-32 pb-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 text-center">
+      {/* HERO SECTION */}
+      <section
+        className="relative h-125 flex items-center justify-center text-center"
+        style={{
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60"></div>
 
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-12">
-            Why Choose Civieways
-          </h2>
+        <div className="relative z-10 text-white px-6">
+          <motion.h1
+            initial={{ opacity: 0, y: -40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-2xl md:text-3xl font-bold mb-4"
+          >
+            Contact Civieways Construction
+          </motion.h1>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Quality Construction",
-                desc: "Our team delivers durable and reliable structures, meeting the highest construction standards.",
-              },
-              {
-                title: "Professional Team",
-                desc: "Experienced engineers, architects, and skilled workers ensuring excellence in every project.",
-              },
-              {
-                title: "Timely Delivery",
-                desc: "We complete projects on schedule without compromising quality, respecting client deadlines.",
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ y: -10 }}
-                initial={{ opacity: 0, y: 60 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
-                className="p-6 shadow-md rounded-lg"
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="max-w-2xl mx-auto text-lg"
+          >
+            Have a construction project in mind? Let's discuss how we can help you build.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* CONTACT SECTION */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+
+          <motion.h2
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="text-3xl md:text-4xl font-bold text-blue-900 text-center mb-14"
+          >
+            Get In Touch
+          </motion.h2>
+
+          <div className="grid md:grid-cols-2 gap-12">
+
+            {/* CONTACT FORM */}
+            <form
+              onSubmit={handleSubmit}
+              className="bg-gray-50 p-10 rounded-xl shadow-lg space-y-6"
+            >
+              <div className="grid md:grid-cols-2 gap-6">
+
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                  onChange={handleChange}
+                  className="w-full p-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900"
+                />
+
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                  onChange={handleChange}
+                  className="w-full p-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900"
+                />
+
+              </div>
+
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                onChange={handleChange}
+                className="w-full p-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900"
+              />
+
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                rows="5"
+                required
+                onChange={handleChange}
+                className="w-full p-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900"
+              ></textarea>
+
+              <button
+                type="submit"
+                className="w-full bg-blue-900 text-white py-4 rounded-lg font-semibold hover:bg-blue-800 transition"
               >
-                <h4 className="text-xl font-semibold text-yellow-500 mb-4">
-                  {item.title}
-                </h4>
-                <p className="text-gray-600">{item.desc}</p>
-              </motion.div>
-            ))}
+                Send Message
+              </button>
+            </form>
+
+
+            {/* CONTACT DETAILS */}
+            <div className="space-y-8">
+
+              <div className="flex items-start gap-4">
+                <FaPhoneAlt className="text-yellow-500 text-xl mt-1" />
+                <div>
+                  <h3 className="font-semibold text-blue-900">Phone</h3>
+                  <p className="text-gray-600">+254 702 092 456</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <FaEnvelope className="text-yellow-500 text-xl mt-1" />
+                <div>
+                  <h3 className="font-semibold text-blue-900">Email</h3>
+                  <p className="text-gray-600">info@civieways.co.ke</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+
+                <div>
+                  <h3 className="font-semibold text-blue-900 flex items-center gap-2">
+                 📍 Office Location
+                </h3>
+                  <p className="text-gray-600">
+                    Muslim Rd off Park Road,
+                    Ngara - Kirima Market Building,
+                    Nairobi
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-blue-900 mb-2">
+                  Office Hours
+                </h3>
+                <p className="text-gray-600">
+                  Monday - Friday: 8:00 AM – 5:00 PM <br/>
+                  Saturday: 9:00 AM – 1:00 PM
+                </p>
+              </div>
+
+            </div>
+
           </div>
 
         </div>
       </section>
 
 
-      {/* Map Section */}
-      <section className="relative w-full h-[80vh] flex flex-col md:flex-row">
+      {/* MAP SECTION (SMALLER) */}
+      <section className="py-10 px-6">
+        <div className="max-w-6xl mx-auto rounded-xl overflow-hidden shadow-lg">
 
-        <motion.div
-          className="w-full h-full"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
           <iframe
             title="Civieways Location"
             src="https://maps.google.com/maps?q=Ngara%20Kirima%20Market%20Building%20Nairobi&t=&z=15&ie=UTF8&iwloc=&output=embed"
-            className="w-full h-full border-0"
+            className="w-full h-100 border-0"
             loading="lazy"
           ></iframe>
-        </motion.div>
 
+        </div>
       </section>
 
 
-      {/* Contact Info Cards */}
-      <section className="py-20 max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
-
-        {[
-          {
-            icon: <FaPhoneAlt />,
-            title: "Phone",
-            desc: "+254 700 000 000",
-          },
-          {
-            icon: <FaEnvelope />,
-            title: "Email",
-            desc: "info@civieways.co.ke",
-          },
-          {
-            icon: <FaMapMarkerAlt />,
-            title: "Location",
-            desc: "Muslim Rd off Park Road, Ngara - Kirima Market Building",
-          },
-        ].map((info, idx) => (
-          <motion.div
-            key={idx}
-            className="bg-white p-8 rounded-xl shadow-md flex flex-col items-center text-center hover:shadow-xl transition"
-            whileHover={{ y: -6 }}
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: idx * 0.2 }}
-          >
-            <div className="text-yellow-500 text-4xl mb-4">{info.icon}</div>
-
-            <h3 className="text-xl font-semibold text-blue-900 mb-2">
-              {info.title}
-            </h3>
-
-            <p className="text-gray-600">{info.desc}</p>
-          </motion.div>
-        ))}
-
-      </section>
-
-
-      {/* Floating Chat Button */}
+      {/* FLOATING CHAT BUTTON */}
       <div className="fixed bottom-6 right-6 flex flex-col items-center gap-3 z-50">
 
         {open && (
           <>
             <a
-              href="https://wa.me/254700000000"
+              href="https://wa.me/254702092456"
               className="bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600"
             >
               <FaWhatsapp size={20} />
@@ -172,6 +264,7 @@ export default function Contact() {
         >
           <FaComments size={22} />
         </button>
+        
 
       </div>
 

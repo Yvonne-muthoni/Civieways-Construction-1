@@ -89,7 +89,7 @@ export default function Services() {
             initial={{ opacity: 0, y: -40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-6xl font-bold mb-4"
+            className="text-2xl md:text-3xl font-bold mb-4"
           >
             Our Construction Services
           </motion.h1>
@@ -180,7 +180,7 @@ export default function Services() {
 
       {/* Call To Action */}
       <section className="py-6 bg-yellow-500 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
+        <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6">
           Start Your Construction Project with Us
         </h2>
 

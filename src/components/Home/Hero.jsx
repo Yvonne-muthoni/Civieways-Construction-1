@@ -20,7 +20,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-white px-6 pt-16">
-        <h1 className="text-2xl md:text-4xl font-bold mb-6 mt-2">
+        <h1 className="text-2xl md:text-3xl font-bold mb-6 mt-2">
           Professional Construction & Engineering Services
         </h1>
         <p className="max-w-2xl mx-auto text-lg mb-8">
