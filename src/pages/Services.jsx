@@ -1,49 +1,55 @@
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import {
   FaRegComments,
   FaRegCalendarAlt,
   FaProjectDiagram,
   FaClipboardCheck,
 } from "react-icons/fa";
-
+import OurEquipment from "../components/Home/OurEquipment";
 export default function Services() {
   const heroImage = "/images/hero/construction-hero.jpg";
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
 
   const services = [
     {
       title: "Building Construction",
-      description: "Residential homes, apartments and commercial building projects.",
-      features: ["✔ Residential Homes", "✔ Apartment Complexes", "✔ Office Buildings"],
+      description: "Civieways provides reliable building construction services for residential, commercial, and institutional developments. From foundation work to final structural completion, our team ensures quality workmanship, safety compliance, and efficient project delivery.",
+      features: ["✔ Residential Homes", "✔ Apartment Complexes", "✔ Office Buildings","✔ Office Buildings"],
       image: "/images/hero/Commercial Construction.jpeg",
     },
     {
       title: "Renovations",
-      description: "Modern renovation services for residential and commercial properties.",
-      features: ["✔ Kitchen Remodeling", "✔ Structural Repairs", "✔ Waterproofing"],
+      description: "We offer professional renovation services to upgrade and restore residential and commercial properties. Our renovation solutions improve functionality, aesthetics, and structural durability while maintaining minimal disruption to existing spaces.",
+      features: ["✔ Kitchen Remodeling", "✔ Structural Repairs","✔ Interior Remodelling","✔ Waterproofing", "✔ Workspace Upgrades"],
       image: "/images/Gardencity/ahn.a.jpeg",
     },
     {
       title: "Road & Earthworks",
-      description: "Road construction and site preparation works.",
-      features: ["✔ Road Construction", "✔ Excavation", "✔ Drainage Systems"],
+      description: "Civieways undertakes road construction and earthworks projects including site preparation, grading, and drainage systems. Our team uses modern equipment and engineering practices to ensure durable road infrastructure..",
+      features: ["✔ Road Construction", "✔ Site Excavation", "✔ Drainage Systems","✔ Land Preparation"],
       image: "/images/hero/Road.jpeg",
     },
     {
       title: "Project Management",
-      description: "Professional management from planning to delivery.",
-      features: ["✔ Project Planning", "✔ Engineering Coordination", "✔ Budget Management"],
+      description: "Our project management services ensure construction projects are completed on time, within budget, and according to required quality standards. We coordinate teams, manage resources, and monitor project progress from planning to completion.",
+      features: ["✔ Project Planning", "✔ Engineering Coordination", "✔ Budget Management","✔ Construction Supervision"],
       image: "/images/hero/Project Management.jpeg",
     },
     {
       title: "Industrial Construction",
-      description: "Factories and warehouse construction projects.",
-      features: ["✔ Warehouses", "✔ Manufacturing Facilities", "✔ Structural Installations"],
+      description: "Civieways specializes in constructing industrial facilities designed to support manufacturing, warehousing, and production operations. We focus on structural strength, functionality, and long-term operational efficiency.",
+      features: ["✔ Warehouses", "✔ Manufacturing Facilities", "✔ Structural Installations","Steel Structures"],
       image: "/images/Haco Industries/h.a.jpeg",
     },
     {
       title: "Interior & Exterior Finishing",
-      description: "Professional interior finishing and fit-out services.",
-      features: ["✔ Painting", "✔ Flooring", "✔ Custom Joinery"],
+      description: "We provide high-quality interior and exterior finishing services that enhance the appearance and durability of buildings. Our finishing works combine craftsmanship, modern materials, and attention to detail.",
+      features: ["✔ Painting", "✔ Flooring", "✔ Custom Joinery","✔ Interior Fit-Out"],
       image: "/images/projects/Institutional.jpeg",
     },
   ];
@@ -84,15 +90,20 @@ export default function Services() {
         }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
+
         <div className="relative z-10 text-white px-6">
+
+          {/* Title */}
           <motion.h1
             initial={{ opacity: 0, y: -40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-2xl md:text-3xl font-bold mb-4"
+            className="text-2xl md:text-3xl font-bold mb-4 text-amber-300"
           >
             Our Construction Services
           </motion.h1>
+
+          {/* Description */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -101,6 +112,41 @@ export default function Services() {
           >
             Professional residential, commercial and infrastructure construction solutions across Kenya.
           </motion.p>
+
+          {/* Statistics inside Hero */}
+          <div
+            ref={ref}
+            className="bg-blue-100/90 backdrop-blur-md py-4 px-4 rounded-xl shadow-lg max-w-3xl mx-auto mt-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center"
+          >
+            <div>
+              <h3 className="text-3xl md:text-4xl font-bold text-blue-900">
+                {inView ? 120 : 0}+
+              </h3>
+              <p className="mt-1 text-gray-700 text-sm md:text-base">Projects Completed</p>
+            </div>
+
+            <div>
+              <h3 className="text-3xl md:text-4xl font-bold text-blue-900">
+                {inView ? 10 : 0}+
+              </h3>
+              <p className="mt-1 text-gray-700 text-sm md:text-base">Years Experience</p>
+            </div>
+
+            <div>
+              <h3 className="text-3xl md:text-4xl font-bold text-blue-900">
+                {inView ? 95 : 0}+
+              </h3>
+              <p className="mt-1 text-gray-700 text-sm md:text-base">Happy Clients</p>
+            </div>
+
+            <div>
+              <h3 className="text-3xl md:text-4xl font-bold text-blue-900">
+                {inView ? 8 : 0}
+              </h3>
+              <p className="mt-1 text-gray-700 text-sm md:text-base">Ongoing Projects</p>
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -177,15 +223,16 @@ export default function Services() {
           </div>
         </div>
       </section>
+      <OurEquipment />
 
       {/* Call To Action */}
       <section className="py-6 bg-yellow-500 text-center">
         <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6">
-          Start Your Construction Project with Us
+          Need Professional Construction Services?
         </h2>
 
         <p className="text-blue-900 mb-8">
-          Contact Civieways Construction today and let's build something great.
+          Our team is ready to help you deliver your project with quality, efficiency, and reliability.  
         </p>
 
         <a

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useInView } from "react-intersection-observer";
 import {
   FaPhoneAlt,
   FaEnvelope,
@@ -8,7 +9,9 @@ import {
   FaInstagram,
   FaLinkedin,
   FaComments,
+  FaGlobe
 } from "react-icons/fa";
+import { SiTiktok } from "react-icons/si"; // 
 
 export default function Contact() {
 
@@ -22,6 +25,11 @@ export default function Contact() {
   });
 
   const heroImage = "/images/Education/moe.j.jpeg";
+   const { ref, inView } = useInView({
+      triggerOnce: true,
+      threshold: 0.3,
+    });
+  
 
   const handleChange = (e) => {
     setFormData({
@@ -51,37 +59,73 @@ ${formData.message}
   return (
     <div className="min-h-screen bg-gray-50">
 
-      {/* HERO SECTION */}
-      <section
-        className="relative h-95 flex items-center justify-center text-center"
-        style={{
-          backgroundImage: `url(${heroImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="absolute inset-0 bg-black/60"></div>
+      {/* HERO SECTION WITH STATISTICS */}
+<section
+  className="relative h-95 flex flex-col items-center justify-center text-center"
+  style={{
+    backgroundImage: `url(${heroImage})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
+  <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="relative z-10 text-white px-6">
-          <motion.h1
-            initial={{ opacity: 0, y: -40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-2xl md:text-3xl font-bold mb-4"
-          >
-            Contact Civieways Construction
-          </motion.h1>
+  <div className="relative z-10 text-white px-6">
+    {/* Title */}
+    <motion.h1
+      initial={{ opacity: 0, y: -40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="text-2xl md:text-3xl font-bold mb-4 mt-4 text-amber-300"
+    >
+      Contact Civieways Construction
+    </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="max-w-2xl mx-auto text-lg"
-          >
-            Have a construction project in mind? Let's discuss how we can help you build.
-          </motion.p>
-        </div>
-      </section>
+    {/* Description */}
+    <motion.p
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.3 }}
+      className="max-w-2xl mx-auto text-lg"
+    >
+      Have a construction project in mind? Let's discuss how we can help you build.
+    </motion.p>
+
+    {/* STATISTICS */}
+    <div
+      ref={ref}
+      className="bg-blue-100/90 backdrop-blur-md py-4 px-4 rounded-xl shadow-lg max-w-3xl mx-auto mt-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center"
+    >
+      <div>
+        <h3 className="text-3xl md:text-4xl font-bold text-blue-900">
+          {inView ? 120 : 0}+
+        </h3>
+        <p className="mt-1 text-gray-700 text-sm md:text-base">Projects Completed</p>
+      </div>
+
+      <div>
+        <h3 className="text-3xl md:text-4xl font-bold text-blue-900">
+          {inView ? 10 : 0}+
+        </h3>
+        <p className="mt-1 text-gray-700 text-sm md:text-base">Years Experience</p>
+      </div>
+
+      <div>
+        <h3 className="text-3xl md:text-4xl font-bold text-blue-900">
+          {inView ? 95 : 0}+
+        </h3>
+        <p className="mt-1 text-gray-700 text-sm md:text-base">Happy Clients</p>
+      </div>
+
+      <div>
+        <h3 className="text-3xl md:text-4xl font-bold text-blue-900">
+          {inView ? 8 : 0}
+        </h3>
+        <p className="mt-1 text-gray-700 text-sm md:text-base">Ongoing Projects</p>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* CONTACT SECTION */}
       <section className="py-20 bg-white">
@@ -192,6 +236,78 @@ ${formData.message}
                   Saturday: 9:00 AM – 1:00 PM
                 </p>
               </div>
+              <div className="flex items-start gap-4 mt-4">
+  <FaGlobe className="text-yellow-500 text-xl mt-1" />
+  <div>
+    <h3 className="font-semibold text-blue-900">Website</h3>
+    <p className="text-gray-600">
+      <a href="https://www.civieways.co.ke" target="_blank" rel="noopener noreferrer">
+        www.civieways.co.ke
+      </a>
+    </p>
+  </div>
+</div>
+              {/* Our Links */}
+<section className="py-10 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-6 text-center">
+    <h2 className="text-2xl md:text-2xl font-bold text-blue-900 mb-6">
+      Our Links
+    </h2>
+
+    <div className="flex justify-center items-center gap-6">
+      {/* WhatsApp */}
+      <a
+        href="https://wa.me/254702092456"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition"
+      >
+        <FaWhatsapp size={22} />
+      </a>
+
+      {/* LinkedIn */}
+      <a
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-blue-500 text-white p-4 rounded-full shadow-lg hover:bg-blue-600 transition"
+      >
+        <FaLinkedin size={22} />
+      </a>
+
+      {/* Instagram */}
+      <a
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-pink-500 text-white p-4 rounded-full shadow-lg hover:bg-pink-600 transition"
+      >
+        <FaInstagram size={22} />
+      </a>
+
+      {/* Facebook */}
+      <a
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition"
+      >
+        <FaFacebook size={22} />
+      </a>
+
+      {/* TikTok (using icon from react-icons/si) */}
+      <a
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-black text-white p-4 rounded-full shadow-lg hover:bg-gray-800 transition"
+      >
+        {/* TikTok icon from react-icons/si */}
+        <SiTiktok size={22} />
+      </a>
+    </div>
+  </div>
+</section>
 
             </div>
 

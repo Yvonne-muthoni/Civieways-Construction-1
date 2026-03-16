@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Layout
 import Navbar from "../components/Layout/Navbar";
 import Footer from "../components/Layout/Footer";
+import FloatingChat from "../components/FloatingChat";
 
 // Pages
 import Home from "../pages/Home";
@@ -16,7 +17,9 @@ import Contact from "../pages/Contact";
 
 function AppRoutes() {
   return (
+    <>
     <Router>
+     
       <Navbar />
 
       <Routes>
@@ -31,6 +34,8 @@ function AppRoutes() {
 
       <Footer />
     </Router>
+    <FloatingChat />
+    </>
   );
 }
 

@@ -26,13 +26,6 @@ export default function ProjectDetail() {
     <div className="bg-gray-50 min-h-screen">
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <Link
-            to="/projects"
-            className="text-yellow-500 font-semibold mb-6 inline-block"
-          >
-            ← Back to Projects
-          </Link>
-
           <h1 className="text-4xl font-bold text-blue-900 text-center mb-10">
             {project.title}
           </h1>
@@ -68,6 +61,15 @@ export default function ProjectDetail() {
                 className="cursor-pointer h-24 w-full object-cover rounded hover:opacity-70"
               />
             ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <Link
+              to="/projects"
+              className="text-yellow-500 font-semibold underline hover:text-yellow-600"
+            >
+              ← Back to Projects
+            </Link>
           </div>
         </div>
       </section>

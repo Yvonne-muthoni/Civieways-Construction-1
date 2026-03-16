@@ -16,11 +16,11 @@ export default function Hero() {
       }}
     >
       {/* Dark Overlay */}
-      
+       <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Content */}
       <div className="relative z-10 text-white px-6 pt-16">
-        <h1 className="text-2xl md:text-3xl font-bold mb-6 mt-2">
+        <h1 className="text-2xl md:text-3xl font-bold mb-6 mt-2 text-amber-300">
           Professional Construction & Engineering Services
         </h1>
         <p className="max-w-2xl mx-auto text-lg mb-8">

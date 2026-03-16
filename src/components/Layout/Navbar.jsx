@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav className="fixed w-full top-0 z-50 bg-transparent py-2.5">
+    <nav className="fixed w-full top-0 z-50 bg-white py-2.5 shadow-md">
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
 
         {/* Logo + Company Name */}
@@ -13,13 +13,13 @@ export default function Navbar() {
             className="h-12 w-auto object-contain"
           />
 
-          <span className="text-yellow-400 font-bold text-lg md:text-xl">
+          <span className="text-blue-800 font-bold text-lg md:text-xl">
             Civieways Construction Ltd
           </span>
         </Link>
 
         {/* Navigation Links */}
-        <div className="hidden md:flex space-x-8 text-yellow-400 font-extrabold">
+        <div className="hidden md:flex space-x-8 text-blue-800 font-extrabold">
 
           <Link
             to="/"
@@ -32,14 +32,14 @@ export default function Navbar() {
             to="/about"
             className="hover:text-yellow-300 transition duration-300"
           >
-            About
+            About Us
           </Link>
 
           <Link
             to="/services"
             className="hover:text-yellow-300 transition duration-300"
           >
-            Services
+            Our Services
           </Link>
 
           <Link

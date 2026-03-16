@@ -1,7 +1,7 @@
 export const projects = [
   {
     id: "residential-housing",
-    title: "Chiromo Project",
+    Description: "Chiromo Project",
     location: "Chiromo Project",
     type: "Residential",
     cover: "/images/Chiromo/ch.a.jpeg",
@@ -16,35 +16,50 @@ export const projects = [
   },
 
   {
-    id: "school-infrastructure",
-    title: "School Infrastructure Project",
-    location: "Homabay",
+    id: "Shauri Primary",
+    title: "Shauri Yako Project",
+    Description: "yufgkojop",
+    location: "Shauri Yako",
     type: "Institutional",
-    cover: "/images/projects/school/1.jpg",
+    cover: "/images/Education/moe.j.jpeg",
     images: [
-      "/images/projects/school/1.jpg",
-      "/images/projects/school/2.jpg",
-      "/images/projects/school/3.jpg"
+"/images/Education/moe.m.jpeg",
+"/images/Education/moe.a.jpeg",
+"/images/Education/moe.b.jpeg",
+"/images/Education/moe.c.jpeg",
+"/images/Education/moe.d.jpeg",
+"/images/Education/moe.e.jpeg",
+"/images/Education/moe.f.jpeg",
+"/images/Education/moe.g.jpeg",
+"/images/Education/moe.h.jpeg",
+"/images/Education/moe.i.jpeg",
+"/images/Education/moe.j.jpeg",
+"/images/Education/moe.k.jpeg",
+"/images/Education/moe.l.jpeg",
+"/images/Education/moe.n.jpeg"
     ]
   },
 
   {
     id: "commercial-complex",
-    title: "Commercial Complex",
-    location: "Nairobi",
+    title: "Garden City AHN",
+    location: "Garden City AHN",
     type: "Commercial",
-    cover: "/images/projects/commercial/1.jpg",
+    cover: "/images/Gardencity/ahn.e.jpeg",
     images: [
-      "/images/projects/commercial/1.jpg",
-      "/images/projects/commercial/2.jpg",
-      "/images/projects/commercial/3.jpg"
+      "/images/Gardencity/ahn.a.jpeg",
+      "/images/Gardencity/ahn.b.jpeg",
+      "/images/Gardencity/ahn.c.jpeg",
+      "/images/Gardencity/ahn.d.jpeg",
+      "/images/Gardencity/ahn.e.jpeg", 
+      "/images/Gardencity/ahn.f.jpeg"
     ]
   },
 
   {
     id: "warehouse-development",
     title: "Warehouse Development",
-    location: "Athi River",
+    location: "",
     type: "Industrial",
     cover: "/images/projects/warehouse/1.jpg",
     images: [

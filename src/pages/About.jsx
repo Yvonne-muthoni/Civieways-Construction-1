@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Stats from "../components/Stats";
+import { Link } from "react-router-dom";
 import {
   FaShieldAlt,
   FaCheckCircle,
@@ -29,9 +30,9 @@ export default function About() {
       initial={{ opacity: 0, y: -40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="text-2xl md:text-3xl font-bold mb-4"
+      className="text-2xl md:text-3xl font-bold mb-4 text-amber-300"
     >
-      About Civieways Construction Company
+    Building Reliable Infrastructure for Tomorrow
     </motion.h1>
 
     <motion.p
@@ -40,12 +41,55 @@ export default function About() {
       transition={{ delay: 0.4 }}
       className="text-lg text-white max-w-2xl mx-auto"
     >
-      Building quality structures and lasting relationships across Kenya.
+      Civieways is a professional construction and engineering company delivering reliable building, infrastructure, and industrial solutions across Kenya.
+
+        
     </motion.p>
+    
+          {/* Buttons */}
+        <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
+          <Link
+            to="/projects"
+            className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-8 py-3 rounded-lg mt-6"
+          >
+            View Our Projects
+          </Link>
+          <Link
+            to="/contact"
+            className="border-2 border-white hover:bg-white hover:text-black text-white font-semibold px-8 py-3 rounded-lg transition mt-6"
+          >
+            Contact us
+          </Link>
+        </div>
 
   </div>
-
+             
 </section>
+    <section className="bg-white py-6">
+    
+            <div className="max-w-5xl mx-auto text-center px-6">
+    
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-3xl md:text-4xl font-bold text-blue-900 mb-6"
+              >
+             
+              </motion.h2>
+    
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+                className="text-gray-600 text-lg leading-relaxed"
+              >
+               We specialize in residential, commercial, and industrial construction projects, providing quality workmanship, experienced project management, and innovative construction solutions. Our mission is to deliver durable, safe, and high-quality infrastructure that supports communities and businesses.
+              </motion.p>
+    
+            </div>
+    
+          </section>
       {/* Company Introduction */}
       <section className="py-6 bg-white">
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
