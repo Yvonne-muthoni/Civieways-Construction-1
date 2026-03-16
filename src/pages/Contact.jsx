@@ -61,7 +61,7 @@ ${formData.message}
 
       {/* HERO SECTION WITH STATISTICS */}
 <section
-  className="relative h-95 flex flex-col items-center justify-center text-center"
+  className="relative py-25 flex flex-col items-center justify-center text-center"
   style={{
     backgroundImage: `url(${heroImage})`,
     backgroundSize: "cover",
@@ -248,7 +248,7 @@ ${formData.message}
   </div>
 </div>
               {/* Our Links */}
-<section className="py-10 bg-gray-50">
+<section className="py-10 bg-gray-50 left-5">
   <div className="max-w-7xl mx-auto px-6 text-center">
     <h2 className="text-2xl md:text-2xl font-bold text-blue-900 mb-6">
       Our Links

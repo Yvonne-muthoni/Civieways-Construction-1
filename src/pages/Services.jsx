@@ -82,7 +82,7 @@ export default function Services() {
 
       {/* Hero Section */}
       <section
-        className="relative h-100 flex flex-col items-center justify-center text-center overflow-hidden"
+        className="relative py-25 flex flex-col items-center justify-center text-center overflow-hidden"
         style={{
           backgroundImage: `url(${heroImage})`,
           backgroundSize: "cover",

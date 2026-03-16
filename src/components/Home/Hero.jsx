@@ -8,7 +8,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative h-125 flex flex-col items-center justify-center text-center overflow-hidden"
+      className="relative py-15 flex flex-col items-center justify-center text-center overflow-hidden"
       style={{
         backgroundImage: `url(${heroImage})`,
         backgroundSize: "cover",
