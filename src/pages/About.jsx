@@ -53,7 +53,7 @@ export default function About() {
           <motion.img
             src="/images/about/Construction site.jpeg"
             alt="Construction site"
-            className="rounded-lg shadow-lg h-96 w-full object-cover"
+            className="rounded-lg shadow-lg h-100 w-full object-cover"
             initial={{ opacity: 0, x: -80 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}

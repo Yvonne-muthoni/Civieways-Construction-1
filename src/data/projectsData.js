@@ -1,54 +1,69 @@
-// Shared project data used by Projects list and project detail pages.
 export const projects = [
   {
     id: "residential-housing",
-    heading: "Residential Housing Project",
-    description: "Modern residential housing development.",
-    location: "Nairobi",
-    mainImage: "/images/hero/Residential Construction.jpeg",
-    gallery: [
-      "/images/hero/Commercial Construction.jpeg",
-      "/images/projects/Construction.jpeg",
-    ],
+    title: "Chiromo Project",
+    location: "Chiromo Project",
+    type: "Residential",
+    cover: "/images/Chiromo/ch.a.jpeg",
+    images: [
+      "/images/Chiromo/ch.a.jpeg", 
+      "/images/Chiromo/ch.b.jpeg", 
+      "/images/Chiromo/ch.c.jpeg", 
+      "/images/Chiromo/ch.d.jpeg", 
+      "/images/Chiromo/ch.e.jpeg",
+      
+    ]
   },
+
   {
     id: "school-infrastructure",
-    heading: "School Infrastructure Project",
-    description: "Construction of classrooms and learning facilities.",
+    title: "School Infrastructure Project",
     location: "Homabay",
-    mainImage: "/images/Josmil School/WhatsApp Image 2026-03-10 at 11.46.21 AM.jpeg",
-    gallery: [
-      "/images/Josmil School/WhatsApp Image 2026-03-10 at 11.46.20 AM (1).jpeg",
-      "/images/Josmil School/WhatsApp Image 2026-03-10 at 11.46.20 AM (2).jpeg",
-      "/images/Josmil School/WhatsApp Image 2026-03-10 at 11.46.29 AM.jpeg",
-    ],
+    type: "Institutional",
+    cover: "/images/projects/school/1.jpg",
+    images: [
+      "/images/projects/school/1.jpg",
+      "/images/projects/school/2.jpg",
+      "/images/projects/school/3.jpg"
+    ]
   },
+
   {
     id: "commercial-complex",
-    heading: "Commercial Complex",
-    description: "Office and retail building construction.",
+    title: "Commercial Complex",
     location: "Nairobi",
-    mainImage: "/images/projects/Construction.jpeg",
-    gallery: [
-      "/images/hero/Commercial Construction.jpeg",
-    ],
+    type: "Commercial",
+    cover: "/images/projects/commercial/1.jpg",
+    images: [
+      "/images/projects/commercial/1.jpg",
+      "/images/projects/commercial/2.jpg",
+      "/images/projects/commercial/3.jpg"
+    ]
   },
+
   {
     id: "warehouse-development",
-    heading: "Warehouse Development",
-    description: "Industrial warehouse construction project.",
+    title: "Warehouse Development",
     location: "Athi River",
-    mainImage: "/images/projects/Warehouse.jpeg",
-    gallery: [
-      "/images/hero/Industrial.jpeg",
-    ],
+    type: "Industrial",
+    cover: "/images/projects/warehouse/1.jpg",
+    images: [
+      "/images/projects/warehouse/1.jpg",
+      "/images/projects/warehouse/2.jpg",
+      "/images/projects/warehouse/3.jpg"
+    ]
   },
+
   {
     id: "road-construction",
-    heading: "Road Construction",
-    description: "Infrastructure and road construction works.",
+    title: "Road Construction",
     location: "Kisumu",
-    mainImage: "/images/hero/Road.jpeg",
-    gallery: [],
-  },
+    type: "Infrastructure",
+    cover: "/images/projects/road/1.jpg",
+    images: [
+      "/images/projects/road/1.jpg",
+      "/images/projects/road/2.jpg",
+      "/images/projects/road/3.jpg"
+    ]
+  }
 ];

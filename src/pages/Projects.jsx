@@ -10,7 +10,7 @@ export default function Projects() {
 
       {/* HERO SECTION */}
       <section
-        className="relative h-150 flex items-center justify-center text-center"
+        className="relative h-90 flex items-center justify-center text-center"
         style={{
           backgroundImage: `url(${encodeURI(heroImage)})`,
           backgroundSize: "cover",
@@ -45,7 +45,7 @@ export default function Projects() {
       </section>
 
       {/* INTRO SECTION */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-6">
 
         <div className="max-w-5xl mx-auto text-center px-6">
 
@@ -85,7 +85,7 @@ export default function Projects() {
               <div className="md:flex md:gap-10 items-start">
                 <div className="md:w-1/2">
                   <img
-                    src={project.mainImage}
+                    src={project.cover}
                     alt={project.heading}
                     className="w-full h-80 object-cover rounded-xl shadow-lg"
                   />
@@ -117,6 +117,24 @@ export default function Projects() {
         </div>
 
       </section>
+       {/* Call To Action */}
+      <section className="py-6 bg-yellow-500 text-center">
+        <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6">
+          Start Your Construction Project with Us
+        </h2>
+
+        <p className="text-blue-900 mb-8">
+          Contact Civieways Construction today and let's build something great.
+        </p>
+
+        <a
+          href="/contact"
+          className="bg-blue-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition"
+        >
+          Contact Us
+        </a>
+      </section>
+
 
     </div>
   );

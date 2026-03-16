@@ -1,86 +1,77 @@
-import { motion } from "framer-motion";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { projects } from "../data/projectsData";
+import { useState } from "react";
 
 export default function ProjectDetail() {
-  const { projectId } = useParams();
-  const navigate = useNavigate();
+  const { id } = useParams();
+  const project = projects.find((p) => p.id === id);
 
-  const project = projects.find((p) => p.id === projectId);
+  const [currentImage, setCurrentImage] = useState(0);
 
   if (!project) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="max-w-xl text-center p-8 bg-white rounded-2xl shadow-md">
-          <h1 className="text-3xl font-bold mb-4 text-blue-900">Project not found</h1>
-          <p className="text-gray-600 mb-6">
-            The project you are looking for does not exist or has been moved.
-          </p>
-          <button
-            onClick={() => navigate("/projects")}
-            className="bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition"
-          >
-            Back to projects
-          </button>
-        </div>
-      </div>
-    );
+    return <div className="p-20 text-center">Project not found</div>;
   }
+
+  const nextImage = () => {
+    setCurrentImage((currentImage + 1) % project.images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImage(
+      (currentImage - 1 + project.images.length) % project.images.length
+    );
+  };
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      <section className="bg-white py-20">
+      <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <button
-            onClick={() => navigate(-1)}
-            className="text-blue-900 underline mb-8"
+          <Link
+            to="/projects"
+            className="text-yellow-500 font-semibold mb-6 inline-block"
           >
-            ← Back to projects
-          </button>
+            ← Back to Projects
+          </Link>
 
-          <div className="md:flex md:items-start md:gap-10">
-            <div className="md:w-1/2">
+          <h1 className="text-4xl font-bold text-blue-900 text-center mb-10">
+            {project.title}
+          </h1>
+
+          <div className="relative">
+            <img
+              src={project.images[currentImage]}
+              alt={project.title}
+              className="w-full h-125 object-cover rounded-lg"
+            />
+
+            <button
+              onClick={prevImage}
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 text-white px-4 py-2 rounded"
+            >
+              ←
+            </button>
+
+            <button
+              onClick={nextImage}
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 text-white px-4 py-2 rounded"
+            >
+              →
+            </button>
+          </div>
+
+          <div className="grid grid-cols-3 md:grid-cols-5 gap-4 mt-8">
+            {project.images.map((img, index) => (
               <img
-                src={project.mainImage}
-                alt={project.heading}
-                className="w-full h-96 object-cover rounded-2xl shadow-lg"
+                key={index}
+                src={img}
+                onClick={() => setCurrentImage(index)}
+                className="cursor-pointer h-24 w-full object-cover rounded hover:opacity-70"
               />
-            </div>
-
-            <div className="md:w-1/2 mt-8 md:mt-0">
-              <h1 className="text-4xl font-bold text-blue-900 mb-4">
-                {project.heading}
-              </h1>
-              <p className="text-gray-700 mb-4">{project.description}</p>
-              <div className="flex items-center gap-2 text-gray-600 mb-8">
-                <span className="text-xl">📍</span>
-                <span>{project.location}</span>
-              </div>
-
-              {project.gallery.length > 0 ? (
-                <>
-                  <h2 className="text-2xl font-semibold text-blue-900 mb-4">
-                    Project Gallery
-                  </h2>
-                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {project.gallery.map((src, idx) => (
-                      <motion.img
-                        key={idx}
-                        src={src}
-                        alt={`${project.heading} ${idx + 1}`}
-                        className="w-full h-52 object-cover rounded-xl shadow-md"
-                        whileHover={{ scale: 1.03 }}
-                      />
-                    ))}
-                  </div>
-                </>
-              ) : (
-                <p className="text-gray-600">No additional photos available.</p>
-              )}
-            </div>
+            ))}
           </div>
         </div>
       </section>
     </div>
   );
 }
+

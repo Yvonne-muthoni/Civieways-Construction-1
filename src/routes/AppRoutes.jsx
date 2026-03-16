@@ -13,6 +13,7 @@ import ProjectDetail from "../pages/ProjectDetail";
 import Clients from "../pages/Clients";
 import Contact from "../pages/Contact";
 
+
 function AppRoutes() {
   return (
     <Router>
@@ -23,7 +24,7 @@ function AppRoutes() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/projects/:projectId" element={<ProjectDetail />} />
+        <Route path="/projects/:id" element={<ProjectDetail />} />
         <Route path="/clients" element={<Clients />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

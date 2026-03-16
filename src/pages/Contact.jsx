@@ -53,7 +53,7 @@ ${formData.message}
 
       {/* HERO SECTION */}
       <section
-        className="relative h-125 flex items-center justify-center text-center"
+        className="relative h-95 flex items-center justify-center text-center"
         style={{
           backgroundImage: `url(${heroImage})`,
           backgroundSize: "cover",
@@ -185,7 +185,7 @@ ${formData.message}
 
               <div>
                 <h3 className="font-semibold text-blue-900 mb-2">
-                  Office Hours
+                 ⏰  Office Hours
                 </h3>
                 <p className="text-gray-600">
                   Monday - Friday: 8:00 AM – 5:00 PM <br/>
