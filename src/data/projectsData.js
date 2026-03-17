@@ -29,7 +29,43 @@ export const projects = [
     "/images/Gardencity/ahn.c.jpeg",
     "/images/Gardencity/ahn.d.jpeg",
     "/images/Gardencity/ahn.e.jpeg",
-    "/images/Gardencity/ahn.f.jpeg"
+    "/images/Gardencity/ahn.f.jpeg",
+  
+"/images/Gardencity/ah (175).jpeg",
+"/images/Gardencity/ah (174).jpeg",
+"/images/Gardencity/ah (172).jpeg",
+"/images/Gardencity/ah (173).jpeg",
+"/images/Gardencity/ah (171).jpeg",
+"/images/Gardencity/ah (170).jpeg",
+"/images/Gardencity/ah (169).jpeg",
+"/images/Gardencity/ah (168).jpeg",
+"/images/Gardencity/ah (167).jpeg",
+"/images/Gardencity/ah (166).jpeg",
+"/images/Gardencity/ah (165).jpeg",
+"/images/Gardencity/ah (164).jpeg",
+"/images/Gardencity/ah (163).jpeg",
+"/images/Gardencity/ah (162).jpeg",
+"/images/Gardencity/ah (156).jpeg",
+"/images/Gardencity/ah (155).jpeg",
+"/images/Gardencity/ah (154).jpeg",
+"/images/Gardencity/ah (153).jpeg",
+"/images/Gardencity/ah (148).jpeg",
+"/images/Gardencity/ah (141).jpeg",
+"/images/Gardencity/ah (140).jpeg",
+"/images/Gardencity/ah (139).jpeg",
+"/images/Gardencity/ah (138).jpeg",
+"/images/Gardencity/ah (120).jpeg",
+"/images/Gardencity/ah (119).jpeg",
+"/images/Gardencity/ah (118).jpeg",
+"/images/Gardencity/ah (93).jpeg",
+"/images/Gardencity/ah (91).jpeg",
+"/images/Gardencity/ah (92).jpeg",
+"/images/Gardencity/ah (89).jpeg",
+"/images/Gardencity/ah (90).jpeg",
+"/images/Gardencity/ah (84).jpeg",
+"/images/Gardencity/ah (83).jpeg",
+"/images/Gardencity/ah (82).jpeg",
+
     ],
   },
 
@@ -43,7 +79,12 @@ export const projects = [
     cover: "/images/Haco Industries/h.b.jpeg",
     images: [
    "/images/Haco Industries/h.b.jpeg",
-  "/images/Haco Industries/h.a.jpeg"
+  "/images/Haco Industries/h.a.jpeg",
+  "/images/Poultry/hav1 (12).jpeg",
+  "/images/Poultry/hav1 (11).jpeg",
+  "/images/Poultry/hav1 (10).jpeg",
+  "/images/Poultry/hav1 (9).jpeg",
+  "/images/Poultry/hav1 (8).jpeg"
     ],
   },
    {
@@ -151,6 +192,11 @@ export const projects = [
 "/images/Poultry/hv.e.jpeg",
 "/images/Poultry/hv.f.jpeg",
 "/images/Poultry/hv.g.jpeg",
+"/images/Poultry/hav1 (12).jpeg",
+"/images/Poultry/hav1 (11).jpeg",
+"/images/Poultry/hav1 (10).jpeg",
+"/images/Poultry/hav1 (9).jpeg",
+"/images/Poultry/hav1 (8).jpeg"
     ]
   }
 ]

@@ -65,11 +65,11 @@ export default function ProjectDetail() {
 
           <div className="mt-10 text-center">
             <Link
-              to="/projects"
-              className="text-yellow-500 font-semibold underline hover:text-yellow-600"
-            >
-              ← Back to Projects
-            </Link>
+        to="/projects"
+        className="inline-block bg-blue-900 text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-blue-800 hover:scale-105 transition duration-300"
+>
+  ← Back to Projects
+</Link>
           </div>
         </div>
       </section>

@@ -249,7 +249,7 @@ ${formData.message}
 </div>
               {/* Our Links */}
 <section className="py-10 bg-gray-50 left-5">
-  <div className="max-w-7xl mx-auto px-6 text-center">
+  <div className="max-w-5xl mx-auto px-6 text-center">
     <h2 className="text-2xl md:text-2xl font-bold text-blue-900 mb-6">
       Our Links
     </h2>

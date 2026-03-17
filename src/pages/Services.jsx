@@ -149,10 +149,19 @@ export default function Services() {
 
         </div>
       </section>
-
+       
+       <section className="py-10 bg-white text-center">
+      <div className="max-w-4xl mx-auto px-6">
+      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+      Civieways offers a wide range of construction and engineering services 
+      tailored to meet the needs of residential, commercial, industrial, and 
+      institutional projects across Kenya.
+    </p>
+    </div>
+    </section>
       {/* What We Do Heading */}
       <section className="py-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">What We Do</h2>
+        <h2 className="text-3xl md:text-3xl font-bold text-blue-900 mb-4">What We Do</h2>
       </section>
 
       {/* Services List */}
@@ -239,7 +248,7 @@ export default function Services() {
           href="/contact"
           className="bg-blue-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition"
         >
-          Contact Us
+          Request Quote
         </a>
       </section>
 

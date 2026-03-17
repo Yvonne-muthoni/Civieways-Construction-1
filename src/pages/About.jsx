@@ -325,18 +325,20 @@ export default function About() {
       {/* Call To Action */}
       <section className="py-4 bg-yellow-500 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
-          Start Your Construction Project with Us
+          Let’s Build Your Next Project Together
+
+
         </h2>
 
         <p className="text-blue-900 mb-8">
-          Contact Civieways Construction today and let's build something great.
+          Whether you are planning a residential, commercial, or industrial project, Civieways is ready to provide professional construction solutions tailored to your needs.
         </p>
 
         <a
           href="/contact"
           className="bg-blue-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition"
         >
-          Contact Us
+          Request Ouote
         </a>
       </section>
 
