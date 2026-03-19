@@ -36,7 +36,7 @@ export default function ProjectDetail() {
             <img
               src={project.images[currentImage]}
               alt={project.title}
-              className="w-full h-125 object-cover rounded-lg"
+              className="w-full h-auto max-h-150 object-contain rounded-lg bg-gray-100"
             />
 
             <button
@@ -55,15 +55,20 @@ export default function ProjectDetail() {
           </div>
 
           <div className="grid grid-cols-3 md:grid-cols-5 gap-4 mt-8">
-            {project.images.map((img, index) => (
-              <img
-                key={index}
-                src={img}
-                onClick={() => setCurrentImage(index)}
-                className="cursor-pointer h-24 w-full object-cover rounded hover:opacity-70"
-              />
-            ))}
-          </div>
+  {project.images.map((img, index) => (
+    <div
+      key={index}
+      onClick={() => setCurrentImage(index)}
+      className="cursor-pointer aspect-3/4 bg-gray-100 rounded overflow-hidden flex items-center justify-center"
+    >
+      <img
+        src={img}
+        alt=""
+        className="max-h-full max-w-full object-contain hover:opacity-70 transition"
+      />
+    </div>
+  ))}
+</div>
 
           <div className="mt-10 text-center">
            <button
