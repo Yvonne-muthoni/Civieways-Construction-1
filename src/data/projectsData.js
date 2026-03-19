@@ -1,4 +1,40 @@
 export const projects = [
+ {
+    id: "Joseph's Home",
+    heading: "Residential Home",
+    location: "📍Kisumu, Kisumu – Kenya",
+    description:
+      "The Mr.Joseph's residential home project involved the construction of a private residential house tailored to meet modern living standards.The scope included structural works,masonary,and finishing to deliver a comfortable,durable,and a well  designed home.",
+    category: "Residential Construction",
+    cover: "/images/Joseph/mj (4).jpeg",
+    images: [
+      
+"/images/Joseph/mj (1).jpeg",
+"/images/Joseph/mj (2).jpeg",
+"/images/Joseph/mj (3).jpeg",
+"/images/Joseph/mj (23).jpeg",
+"/images/Joseph/mj (22).jpeg",
+"/images/Joseph/mj (21).jpeg",
+"/images/Joseph/mj (20).jpeg",
+"/images/Joseph/mj (19).jpeg",
+"/images/Joseph/mj (18).jpeg",
+"/images/Joseph/mj (17).jpeg",
+"/images/Joseph/mj (16).jpeg",
+"/images/Joseph/mj (15).jpeg",
+"/images/Joseph/mj (14).jpeg",
+"/images/Joseph/mj (13).jpeg",
+"/images/Joseph/mj (12).jpeg",
+"/images/Joseph/mj (11).jpeg",
+"/images/Joseph/mj (10).jpeg",
+"/images/Joseph/mj (9).jpeg",
+"/images/Joseph/mj (8).jpeg",
+"/images/Joseph/mj (7).jpeg",
+"/images/Joseph/mj (6).jpeg",
+"/images/Joseph/mj (5).jpeg",
+"/images/Joseph/mj (4).jpeg",
+  ],
+  },
+
   {
     id: "chiromo-human-anatomy",
     heading: "Chiromo Project(laboratory)",
@@ -198,5 +234,46 @@ export const projects = [
 "/images/Poultry/hav1 (9).jpeg",
 "/images/Poultry/hav1 (8).jpeg"
     ]
-  }
+  },
+  {
+    id: "jupiter hospital",
+    heading: "Haven Hospital(Jupiter Wards)",
+    location: "📍Ruai – Kenya",
+    description:
+      "The Haven Hospital Wards project involved construction and finishing of patient ward facilities designed to support efficient healthcare delivery.The scope included structural works,interior partitioning and installation of essential ward infrastructure to create a safe,functional,and patient friendly environment.",
+    category: "Healthcare Infrastructure/Medical Construction.",
+    cover: "/images/Jupiter/ha (2).jpeg",
+    images: [   
+"/images/Jupiter/ha (1).jpeg",
+"/images/Jupiter/ha (2).jpeg",
+"/images/Jupiter/ha (3).jpeg",
+"/images/Jupiter/ha (4).jpeg",
+"/images/Jupiter/ha (5).jpeg",
+"/images/Jupiter/ha (6).jpeg",
+"/images/Jupiter/ha (7).jpeg",
+"/images/Jupiter/ha (8).jpeg",
+"/images/Jupiter/ha (9).jpeg",
+"/images/Jupiter/ha (10).jpeg",
+"/images/Jupiter/ha (11).jpeg"
+    ],
+  },
+{
+    id: "Avenue hospital",
+    heading: "Avenue Hospital-Cath Lab Reception",
+    location: "📍Parklands, Nairobi – Kenya",
+    description:
+      "The project involved interior construction and finishing works for a specialized medical reception area.The scope included space planning,partitioning,and installation of high quality finishes to create a welcoming,functional and efficiend reception environment.",
+    category: "Healthcare Infrastructure /Interior Fit-Out",
+    cover: "/images/Cathlab/av (4).jpeg",
+    images: [
+"/images/Cathlab/av (1).jpeg",
+"/images/Cathlab/av (2).jpeg",
+"/images/Cathlab/av (3).jpeg",
+"/images/Cathlab/av (4).jpeg",
+"/images/Cathlab/av (5).jpeg",
+"/images/Cathlab/av (6).jpeg",
+"/images/Cathlab/av (7).jpeg",
+    ],
+  },
+
 ]

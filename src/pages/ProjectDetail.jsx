@@ -1,12 +1,14 @@
 import { useParams, Link } from "react-router-dom";
 import { projects } from "../data/projectsData";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function ProjectDetail() {
   const { id } = useParams();
   const project = projects.find((p) => p.id === id);
 
   const [currentImage, setCurrentImage] = useState(0);
+  const navigate = useNavigate();
 
   if (!project) {
     return <div className="p-20 text-center">Project not found</div>;
@@ -64,12 +66,12 @@ export default function ProjectDetail() {
           </div>
 
           <div className="mt-10 text-center">
-            <Link
-        to="/projects"
-        className="inline-block bg-blue-900 text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-blue-800 hover:scale-105 transition duration-300"
+           <button
+  onClick={() => navigate(-1)}
+  className="inline-block bg-blue-900 text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-blue-800 hover:scale-105 transition duration-300"
 >
   ← Back to Projects
-</Link>
+</button>
           </div>
         </div>
       </section>

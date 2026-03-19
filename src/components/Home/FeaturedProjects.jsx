@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 export default function FeaturedProjects() {
   const projects = [
     {
-      title: "Residential Construction",
+      title: "Residential Projects",
       image: "/images/hero/Residential Construction.jpeg",
       link: "/projects#residential",
     },
     {
-      title: "Josmil School",
-      image: "/images/Josmil School/WhatsApp Image 2026-03-10 at 11.46.25 AM (2).jpeg",
+      title: "Institutional Projects",
+      image: "/images/Education/moe.m.jpeg",
       link: "/projects#commercial",
     },
     {
