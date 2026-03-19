@@ -1,7 +1,7 @@
 export const projects = [
   {
     id: "chiromo-human-anatomy",
-    heading: "Chiromo Human Anatomy Project",
+    heading: "Chiromo Project(laboratory)",
     location: "📍Chiromo, Nairobi – Kenya",
     description:
       "The Chiromo Human Anatomy Project involved specialized construction and technical support within a medical learning environment. The project focused on developing infrastructure that supports medical training, research facilities, and laboratory operations, ensuring safe, functional, and modern learning spaces for health sciences.",
@@ -90,7 +90,7 @@ export const projects = [
    {
    id: "Josmil School",
     heading: " Josmil School Project",
-    location: "📍Kasarani, Nairobi – Kenya",
+    location: "📍Homabay County – Kenya",
     description:
       "The Josmil School project focused on developing infrastructure that supports a safe and conducive learning environment. The project aimed at improving educational facilities and student learning spaces through well-structured institutional construction.",
     category: "Education Infrastructure",
@@ -129,7 +129,7 @@ export const projects = [
 {
    id: "Shauri Yako Primary School",
     heading: "  Shauri Yako Primary School (Ministry of Education)",
-    location: "📍Ministry of Education – Kenya",
+    location: "📍Homabay County – Kenya",
     description:
       "The Shauri Yako Primary School project was undertaken in collaboration with the Ministry of Education to support the development of public education infrastructure. The work focused on improving learning facilities, classroom environments, and institutional support spaces for students and teachers.",
     category:"Government / Education Infrastructure", 
@@ -177,7 +177,7 @@ export const projects = [
 
   {
     id: "Haven Poultry",
-    heading: "Haven Poultry – Daily Farm (Steel Works)Haven Poultry – Daily Farm (Steel Works)",
+    heading: "Haven Poultry – Dairy Farm(Steel Work)",
     location: "📍Ruai, Nairobi – Kenya",
     description:
       "The Haven Poultry – Daily Farm project involved structural steel fabrication and installation for poultry farming infrastructure. The project focused on constructing durable steel frameworks and agricultural structures designed to support efficient poultry production and long-term farm operations.",
