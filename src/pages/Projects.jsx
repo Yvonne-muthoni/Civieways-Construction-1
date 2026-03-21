@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { projects } from "../data/projectsData";
 import { useInView } from "react-intersection-observer";
+import { useState } from "react";
 
 export default function Projects() {
 
@@ -12,6 +13,45 @@ export default function Projects() {
     triggerOnce: true,
     threshold: 0.3,
   });
+
+  // ✅ STATE FOR FILTERING
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  // ✅ CATEGORY LOGIC
+  const getCategory = (project) => {
+    if (
+      project.category.toLowerCase().includes("education") ||
+      project.heading.toLowerCase().includes("school")
+    ) {
+      return "Schools";
+    }
+
+    if (
+      project.category.toLowerCase().includes("health") ||
+      project.heading.toLowerCase().includes("hospital")
+    ) {
+      return "Hospitals";
+    }
+
+    if (project.category.toLowerCase().includes("residential")) {
+      return "Residentials";
+    }
+
+    if (
+      project.category.toLowerCase().includes("agricultural") ||
+      project.heading.toLowerCase().includes("poultry")
+    ) {
+      return "Agri Farms";
+    }
+
+    return "Others";
+  };
+
+  // ✅ FILTERED PROJECTS
+  const filteredProjects =
+    activeCategory === "All"
+      ? projects
+      : projects.filter((p) => getCategory(p) === activeCategory);
 
   return (
     <div className="bg-gray-50 min-h-screen">
@@ -25,10 +65,8 @@ export default function Projects() {
           backgroundPosition: "center",
         }}
       >
-        {/* Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
 
-        {/* Content */}
         <div className="relative z-10 text-white px-6">
 
           <motion.h1
@@ -50,7 +88,7 @@ export default function Projects() {
             projects delivered by Civieways Construction.
           </motion.p>
 
-          {/* Statistics */}
+          {/* Stats */}
           <section className="mt-8 flex justify-center">
             <div
               ref={ref}
@@ -89,99 +127,113 @@ export default function Projects() {
         </div>
       </section>
 
-      {/* INTRO SECTION */}
+      {/* INTRO */}
       <section className="bg-white py-12">
         <div className="max-w-5xl mx-auto text-center px-6">
 
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold text-blue-900 mb-6"
           >
             Building Excellence Across Every Project
           </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
             className="text-gray-600 text-lg leading-relaxed"
           >
             We take pride in delivering high-quality construction projects
             across residential, commercial and institutional sectors.
-            Our commitment to craftsmanship, safety and innovation ensures
-            that every project we complete meets the highest standards
-            of durability and design.
           </motion.p>
 
         </div>
       </section>
 
-      {/* PROJECTS SECTION */}
+      {/* PROJECTS */}
       <section className="bg-gray-100 py-20">
 
-        <div className="max-w-7xl mx-auto px-6 space-y-16">
+        <div className="max-w-7xl mx-auto px-6">
 
-          {projects.map((project) => (
+          {/* ✅ CATEGORY BUTTONS */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {["All", "Schools", "Hospitals", "Residentials", "Agri Farms"].map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={`px-5 py-2 rounded-full font-semibold transition ${
+                  activeCategory === cat              
+            ? "bg-yellow-400 text-black"
+            : "bg-white text-yellow-500 border border-yellow-400 hover:bg-yellow-400 hover:text-black"
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
 
-            <div
-              key={project.id}
-              className="bg-white shadow-xl rounded-2xl p-8"
-            >
+          {/* ✅ PROJECT LIST */}
+          <div className="space-y-16">
+            {filteredProjects.map((project) => (
 
-              <div className="md:flex md:gap-10 items-center">
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="bg-white shadow-xl rounded-2xl p-8"
+              >
 
-                {/* IMAGE */}
-                <div className="md:w-1/2">
-                  <img
-                    src={project.cover}
-                    alt={project.heading}
-                    className="w-full h-80 object-cover rounded-xl shadow-lg"
-                  />
+                <div className="md:flex md:gap-10 items-center">
+
+                  {/* IMAGE */}
+                  <div className="md:w-1/2">
+                    <img
+                      src={project.cover}
+                      alt={project.heading}
+                      className="w-full h-80 object-cover rounded-xl shadow-lg"
+                    />
+                  </div>
+
+                  {/* CONTENT */}
+                  <div className="md:w-1/2 mt-8 md:mt-0">
+
+                    <h2 className="text-2xl font-bold text-blue-900 mb-3">
+                      {project.heading}
+                    </h2>
+
+                    <p className="font-bold mb-2">
+                      {project.location}
+                    </p>
+
+                    <p className="text-gray-600 mb-4">
+                      {project.description}
+                    </p>
+
+                    <p className="font-semibold mb-6">
+                      {project.category}
+                    </p>
+
+                    <Link
+                      to={`/projects/${project.id}`}
+                      className="text-blue-900 font-semibold underline hover:text-blue-700"
+                    >
+                      View project
+                    </Link>
+
+                  </div>
+
                 </div>
 
-                {/* CONTENT */}
-                <div className="md:w-1/2 mt-8 md:mt-0">
+              </motion.div>
 
-                  <h2 className="text-2xl font-bold text-blue-900 mb-3">
-                    {project.heading}
-                  </h2>
-
-                  <p className="text-black-700 font-extrabold mb-2">
-                    Location: {project.location}
-                  </p>
-
-                  <p className="text-gray-600 mb-4">
-                    {project.description}
-                  </p>
-
-                  <p className="text-large font-semibold text-black-700 font-extrabold-800 mb-6">
-                    Category: {project.category}
-                  </p>
-
-                  <Link
-                    to={`/projects/${project.id}`}
-                    className="text-blue-900 font-semibold underline hover:text-blue-700"
-                  >
-                    View project
-                  </Link>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          ))}
+            ))}
+          </div>
 
         </div>
 
       </section>
 
-      {/* CALL TO ACTION */}
+      {/* CTA */}
       <section className="py-12 bg-yellow-500 text-center">
-
         <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6">
           Start Your Construction Project with Us
         </h2>
@@ -196,7 +248,6 @@ export default function Projects() {
         >
           Contact Us
         </a>
-
       </section>
 
     </div>
