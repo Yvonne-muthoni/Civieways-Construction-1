@@ -41,7 +41,7 @@ export default function About() {
       transition={{ delay: 0.4 }}
       className="text-lg text-white max-w-2xl mx-auto"
     >
-      Civieways is a professional construction and engineering company delivering reliable building, infrastructure, and industrial solutions across Kenya.
+      Civieways is a professional construction and engineering company delivering reliable building, infrastructure and industrial solutions across Kenya.
 
         
     </motion.p>
@@ -84,7 +84,7 @@ export default function About() {
                 transition={{ delay: 0.2 }}
                 className="text-gray-600 text-lg leading-relaxed"
               >
-               We specialize in residential, commercial, and industrial construction projects, providing quality workmanship, experienced project management, and innovative construction solutions. Our mission is to deliver durable, safe, and high-quality infrastructure that supports communities and businesses.
+               We specialize in residential, commercial, and industrial construction projects, providing quality workmanship, experienced project management and innovative construction solutions. Our mission is to deliver durable, safe and high-quality infrastructure that supports communities and businesses.
               </motion.p>
     
             </div>
@@ -121,7 +121,7 @@ export default function About() {
             <p className="text-gray-700 leading-relaxed">
               From planning and design to execution and project management,
               Civieways ensures every project is completed efficiently,
-              safely, and to the highest level of craftsmanship.
+              safely and to the highest level of craftsmanship.
             </p>
           </motion.div>
 
@@ -139,7 +139,7 @@ export default function About() {
             <h3 className="text-2xl font-bold text-blue-900 mb-4">Our Mission</h3>
             <p className="text-gray-700 leading-relaxed">
               To deliver superior construction services that exceed client
-              expectations, foster strong partnerships, and contribute positively
+              expectations, foster strong partnerships and contribute positively
               to the built environment.
             </p>
           </motion.div>
@@ -151,7 +151,7 @@ export default function About() {
             <h3 className="text-2xl font-bold text-blue-900 mb-4">Our Vision</h3>
             <p className="text-gray-700 leading-relaxed">
               To be the leading and most trusted construction partner in East
-              Africa, recognized for our innovative solutions and exceptional
+              Africa,recognized for our innovative solutions and exceptional
               craftsmanship.
             </p>
           </motion.div>
@@ -331,7 +331,7 @@ export default function About() {
         </h2>
 
         <p className="text-blue-900 mb-8">
-          Whether you are planning a residential, commercial, or industrial project, Civieways is ready to provide professional construction solutions tailored to your needs.
+          Whether you are planning a residential, commercial or industrial project, Civieways is ready to provide professional construction solutions tailored to your needs.
         </p>
 
         <a

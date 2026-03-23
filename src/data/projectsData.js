@@ -4,7 +4,7 @@ export const projects = [
     heading: "Residential Home",
     location: "📍Kisumu, Kisumu – Kenya",
     description:
-      "The Mr.Joseph's residential home project involved the construction of a private residential house tailored to meet modern living standards.The scope included structural works,masonary,and finishing to deliver a comfortable,durable,and a well  designed home.",
+      "The Mr.Joseph's residential home project involved the construction of a private residential house tailored to meet modern living standards.The scope included structural works,masonary and finishing to deliver a comfortable,durable,and a well  designed home.",
     category: "Residential Construction",
     cover: "/images/Joseph/mj (4).jpeg",
     images: [
@@ -40,7 +40,7 @@ export const projects = [
     heading: "Chiromo Project(laboratory)",
     location: "📍Chiromo, Nairobi – Kenya",
     description:
-      "The Chiromo Human Anatomy Project involved specialized construction and technical support within a medical learning environment. The project focused on developing infrastructure that supports medical training, research facilities, and laboratory operations, ensuring safe, functional, and modern learning spaces for health sciences.",
+      "The Chiromo Human Anatomy Project involved specialized construction and technical support within a medical learning environment. The project focused on developing infrastructure that supports medical training,research facilities and laboratory operations,ensuring safe,functional and modern learning spaces for health sciences.",
     category: "Medical / Institutional Construction",
     cover: "/images/Chiromo/ch.a.jpeg",
     images: [
@@ -110,7 +110,7 @@ export const projects = [
     heading: "Haco Industries Project",
     location: "📍Kasarani, Nairobi – Kenya",
     description:
-      "The Haco Industries project involved infrastructure and technical works within an industrial manufacturing environment. The project focused on supporting production operations, facility functionality, and efficient industrial workspace design in line with modern manufacturing standards.",
+      "The Haco Industries project involved infrastructure and technical works within an industrial manufacturing environment. The project focused on supporting production operations,facility functionality and efficient industrial workspace design in line with modern manufacturing standards.",
     category: "Industrial / Manufacturing Facility",
     cover: "/images/Haco Industries/h.b.jpeg",
     images: [
@@ -167,7 +167,7 @@ export const projects = [
     heading: "  Shauri Yako Primary School (Ministry of Education)",
     location: "📍Homabay County – Kenya",
     description:
-      "The Shauri Yako Primary School project was undertaken in collaboration with the Ministry of Education to support the development of public education infrastructure. The work focused on improving learning facilities, classroom environments, and institutional support spaces for students and teachers.",
+      "The Shauri Yako Primary School project was undertaken in collaboration with the Ministry of Education to support the development of public education infrastructure.The work focused on improving learning facilities, classroom environments and institutional support spaces for students and teachers.",
     category:"Government / Education Infrastructure", 
     cover: "/images/Education/moe.i.jpeg",
     images: [
@@ -194,7 +194,7 @@ export const projects = [
     heading: "Muthaiga Electric Fence Project",
     location: "📍Muthaiga, Nairobi – Kenya",
     description:
-      "The Muthaiga Electric Fence Project involved the installation of a high-security electric perimeter fencing system designed to enhance property protection. The project focused on providing reliable perimeter security, controlled access, and modern security infrastructure for residential property protection.",
+      "The Muthaiga Electric Fence Project involved the installation of a high-security electric perimeter fencing system designed to enhance property protection. The project focused on providing reliable perimeter security, controlled access and modern security infrastructure for residential property protection.",
     category: "Security Infrastructure / Electrical Works",
     cover: "/images/Muthaiga Masonry/m.i.jpeg",
     images: [
@@ -216,7 +216,7 @@ export const projects = [
     heading: "Haven Poultry – Dairy Farm(Steel Work)",
     location: "📍Ruai, Nairobi – Kenya",
     description:
-      "The Haven Poultry – Daily Farm project involved structural steel fabrication and installation for poultry farming infrastructure. The project focused on constructing durable steel frameworks and agricultural structures designed to support efficient poultry production and long-term farm operations.",
+      "The Haven Poultry – Dairy Farm project involved structural steel fabrication and installation for poultry farming infrastructure. The project focused on constructing durable steel frameworks and agricultural structures designed to support efficient poultry production and long-term farm operations.",
     category: "Agricultural Infrastructure / Steel Works",
     cover: "/images/Poultry/hv.e.jpeg",
     images: [
@@ -262,7 +262,7 @@ export const projects = [
     heading: "Avenue Hospital-Cath Lab Reception",
     location: "📍Parklands, Nairobi – Kenya",
     description:
-      "The project involved interior construction and finishing works for a specialized medical reception area.The scope included space planning,partitioning,and installation of high quality finishes to create a welcoming,functional and efficiend reception environment.",
+      "The project involved interior construction and finishing works for a specialized medical reception area.The scope included space planning,partitioning,and installation of high quality finishes to create a welcoming,functional and efficient reception environment.",
     category: "Healthcare Infrastructure /Interior Fit-Out",
     cover: "/images/Cathlab/av (4).jpeg",
     images: [

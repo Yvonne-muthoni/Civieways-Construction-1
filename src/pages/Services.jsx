@@ -18,37 +18,37 @@ export default function Services() {
   const services = [
     {
       title: "Building Construction",
-      description: "Civieways provides reliable building construction services for residential, commercial, and institutional developments. From foundation work to final structural completion, our team ensures quality workmanship, safety compliance, and efficient project delivery.",
+      description: "Civieways provides reliable building construction services for residential, commercial and institutional developments. From foundation work to final structural completion, our team ensures quality workmanship, safety compliance and efficient project delivery.",
       features: ["✔ Residential Homes", "✔ Apartment Complexes", "✔ Office Buildings","✔ Office Buildings"],
       image: "/images/hero/Commercial Construction.jpeg",
     },
     {
       title: "Renovations",
-      description: "We offer professional renovation services to upgrade and restore residential and commercial properties. Our renovation solutions improve functionality, aesthetics, and structural durability while maintaining minimal disruption to existing spaces.",
+      description: "We offer professional renovation services to upgrade and restore residential and commercial properties. Our renovation solutions improve functionality, aesthetics and structural durability while maintaining minimal disruption to existing spaces.",
       features: ["✔ Kitchen Remodeling", "✔ Structural Repairs","✔ Interior Remodelling","✔ Waterproofing", "✔ Workspace Upgrades"],
       image: "/images/Gardencity/ahn.a.jpeg",
     },
     {
       title: "Road & Earthworks",
-      description: "Civieways undertakes road construction and earthworks projects including site preparation, grading, and drainage systems. Our team uses modern equipment and engineering practices to ensure durable road infrastructure..",
+      description: "Civieways undertakes road construction and earthworks projects including site preparation, grading and drainage systems. Our team uses modern equipment and engineering practices to ensure durable road infrastructure..",
       features: ["✔ Road Construction", "✔ Site Excavation", "✔ Drainage Systems","✔ Land Preparation"],
       image: "/images/hero/Road.jpeg",
     },
     {
       title: "Project Management",
-      description: "Our project management services ensure construction projects are completed on time, within budget, and according to required quality standards. We coordinate teams, manage resources, and monitor project progress from planning to completion.",
+      description: "Our project management services ensure construction projects are completed on time, within budget and according to required quality standards. We coordinate teams, manage resources and monitor project progress from planning to completion.",
       features: ["✔ Project Planning", "✔ Engineering Coordination", "✔ Budget Management","✔ Construction Supervision"],
       image: "/images/hero/Project Management.jpeg",
     },
     {
       title: "Industrial Construction",
-      description: "Civieways specializes in constructing industrial facilities designed to support manufacturing, warehousing, and production operations. We focus on structural strength, functionality, and long-term operational efficiency.",
+      description: "Civieways specializes in constructing industrial facilities designed to support manufacturing, warehousing and production operations. We focus on structural strength, functionality, and long-term operational efficiency.",
       features: ["✔ Warehouses", "✔ Manufacturing Facilities", "✔ Structural Installations","Steel Structures"],
       image: "/images/Haco Industries/h.a.jpeg",
     },
     {
       title: "Interior & Exterior Finishing",
-      description: "We provide high-quality interior and exterior finishing services that enhance the appearance and durability of buildings. Our finishing works combine craftsmanship, modern materials, and attention to detail.",
+      description: "We provide high-quality interior and exterior finishing services that enhance the appearance and durability of buildings. Our finishing works combine craftsmanship, modern materials and attention to detail.",
       features: ["✔ Painting", "✔ Flooring", "✔ Custom Joinery","✔ Interior Fit-Out"],
       image: "/images/projects/Institutional.jpeg",
     },
