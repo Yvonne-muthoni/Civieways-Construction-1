@@ -34,7 +34,7 @@ export default function Hero() {
             to="/projects"
             className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-8 py-3 rounded-lg"
           >
-            View Our Projects
+            View Our Project
           </Link>
           <Link
             to="/contact"
