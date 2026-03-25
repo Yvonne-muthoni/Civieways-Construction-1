@@ -24,7 +24,7 @@ export default function Hero() {
           Professional Construction & Engineering Services
         </h1>
         <p className="max-w-2xl mx-auto text-lg mb-8">
-          Delivering residential, commercial and industrial construction projects across Kenya.
+          Delivering residential, commercial and industrial construction projects.
         </p>
 
         {/* Buttons */}
