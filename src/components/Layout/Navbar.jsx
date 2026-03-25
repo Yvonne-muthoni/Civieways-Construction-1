@@ -13,7 +13,7 @@ export default function Navbar() {
         {/* Logo + Company Name */}
         <Link to="/" className="flex items-center space-x-3">
           <img
-            src="/logo/civie logo.png"
+            src="/favicon.png"
             alt="Civieways Logo"
             className="h-12 w-auto object-contain"
           />
