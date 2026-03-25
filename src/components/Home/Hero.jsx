@@ -25,7 +25,7 @@ export default function Hero() {
         </h1>
         <p className="max-w-2xl mx-auto text-lg mb-8">
           Delivering residential, commercial and industrial construction projects.
-          Delivering residential, commercial and industrial construction projects across.
+          Delivering residential, commercial and industrial construction projects across Kenya.
         </p>
 
         {/* Buttons */}
@@ -34,7 +34,7 @@ export default function Hero() {
             to="/projects"
             className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-8 py-3 rounded-lg"
           >
-            View Our Project
+            View Our Projects
           </Link>
           <Link
             to="/contact"
